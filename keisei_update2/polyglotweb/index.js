@@ -19,7 +19,7 @@ function emailvalidation(){
         alert('Message must be filled out!!')
     }
     else{
-         alert("Thank you for your submition")
+         alert("Thank you for your submission!!")
     }
 }
 var user_form = Array.from(document.querySelectorAll('#form')).reduce((acc,form) => ({ ...acc, [form.name]: form.value}), {});
