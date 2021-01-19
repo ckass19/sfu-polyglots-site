@@ -1,0 +1,23 @@
+.reg_form li {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 500px;
+    margin-top:  40px;
+}
+.main_contact{
+    height: 1000px;
+    background-image: linear-gradient(to top left, lightblue , violet);
+}
+h2 {
+    margin: 0 auto;
+}
+ul {
+    margin: 
+}
+button {
+    background-color: green;
+    margin-left: 800px;
+    margin-top: 40px;
+    padding: 25px 50px;
+}

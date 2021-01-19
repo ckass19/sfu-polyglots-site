@@ -1,0 +1,31 @@
+form {
+	margin: 0 auto;
+	width: 400px;
+	z-index: 2;
+}
+input {
+ width: 375px;
+ height: 25px;
+ margin-bottom: 10px;
+
+}
+textarea {
+ width: 375px;
+ height: 100px;
+}
+.submit_button {
+	background-color: #4CAF50;
+	box-shadow: 5px ;
+	height: 50px;
+	position: center;
+	color: white;
+}
+.joins {
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+.main_contact{
+	height: 750px;
+}
