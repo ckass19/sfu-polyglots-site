@@ -1,0 +1,36 @@
+.reg_form li {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 500px;
+    margin-top:  40px;
+}
+.main_contact{
+    height: 1000px;
+}
+h2 {
+    margin: 0 auto;
+}
+ul {
+    margin: 
+}
+button {
+    background-color: green;
+    margin-left: 800px;
+    margin-top: 40px;
+    padding: 25px 50px;
+}
+.form_box{
+
+}
+.success {
+    border-color: #2ecc71;
+    border-width: 2px;
+}
+.error {
+    border-color: #e74c3c;
+
+}
+small {
+    color: red;
+}
