@@ -1,0 +1,39 @@
+.broad_event_lists ul{
+	height: 500px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+
+}
+
+.broad_event_lists li  {
+	border: 5px solid #000;
+	margin: 0px 20px;
+	height: 300px;
+	width:  450px;
+
+}
+
+.broad_event_lists li  p{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	font-size: 30px;
+
+
+}
+.general_meeting_image {
+	height: 200px;
+	width: 450px;
+}
+.general_meeting_imag {
+	height: 300px;
+	width: 450px;
+}
+.general_meeting_ima {
+	background-color: #7CFC00;
+	background-size: 300px 450px;
+
+}

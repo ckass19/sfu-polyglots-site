@@ -1,0 +1,21 @@
+.zoom_link {
+	 background-color:  #2D8CFF;
+		width: 200px;
+		height: 70px;
+		margin: 0 auto;
+}
+.zoom_link a {
+	font-family: : "Helvetica Neue";
+	color: white;
+	font-size: 32px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.french_workshop img {
+	height: 300px;
+	width: 400px;
+}
+.french_workshop_head img{
+	height: 300px;
+	width: 400px;
+}
