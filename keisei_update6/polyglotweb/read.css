@@ -1,0 +1,365 @@
+li{
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	opacity: 0.5;
+}
+body {
+	position: relative;
+	min-height: 200vh;
+}
+html {
+	height: 100vh;
+	background-size: cover;
+	font-size: 16px;
+}
+/*header */
+.header{
+  background-color: #26d0c9;
+  color: #fff;
+  height: 90px;
+  width: 100%;
+}
+.left-header {
+	width: 30%;
+	height: 100%;
+	margin: 0;
+	font-size: 2.2vw;
+	float: left;
+	position: relative;
+}
+.left-header p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	margin: 0 auto;
+	transform: translate(-50%, -50%);
+}
+.right-header {
+	width: 70%;
+	height: 100%;
+	float: right;
+	font-size: 1.5rem;	
+}
+.right-nav{
+	float: left;
+	align-items: center;	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+.right-icons {
+	float: right;
+	align-items: center;	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+.header-list {
+	margin: 0 auto;
+	text-align: center;
+	margin: 0 2rem;
+}
+.logo-link {
+	padding: 33px 20px; 
+}
+.media-link{
+	display: inline;
+	padding: 5px 5px;
+}
+.media-link img {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+}
+.JoinUs ul, .Event ul{
+	position: absolute;
+	background-color: #26d0c9;
+	width: 14%;
+	height: 10%;
+	padding: 0;
+	flex-direction: column;
+	display: flex;
+	border-radius: 3px;
+	font-size: 1.5rem;
+	opacity: 0.95;
+	color: white;
+	display: none;
+}
+.JoinUs ul li, .Event li {
+	position: relative;
+	height: 33.3%;
+}
+.JoinUs li a , .Event li a {	
+	position: absolute;
+	width: 100%;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.Workshop ul {
+	position: absolute;
+	background-color: #26d0c9;
+	width: 125%;
+	left: 100%;
+	margin-top: 5%;
+	height: 300%;
+	display: flex;
+	border-radius: 3px;
+	font-size: 1.5rem;
+	opacity: 1;
+	color: white;
+	display: none;
+}
+.icon{
+	display: none;
+	float: right;
+	margin: 8% 8% 0 0;
+	height: 45px;
+	width: 47px;
+	background-image: url('pictures/top/icons8-menu-52.png')
+}
+/*main*/
+.main {
+  height: 80%;
+  align-items: center;
+  margin: 0 auto;
+}
+.btn {
+	padding: 20px 48px;
+	color: white;
+	display: inline-block;
+	opacity: 0.8;
+	border-radius: 4px;
+}
+.container h1{
+	font-size: 60px;
+}
+.container {
+	margin: 0 auto;
+	height: 400px;
+	width: 100%;
+	text-align: center;
+}
+.join {
+	background-color: green;
+	margin-top: 300px;
+	padding: 25px 50px;
+	font-size: 30px;
+}
+/*Blog page part */
+
+.blog_container {
+	max-width: 900px;
+	margin: auto;
+}
+
+body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 1rem;
+}
+
+main {
+	float: left;
+	width: 70%;
+}
+
+main p {
+	font-size: 1.1rem;
+	line-height: 1.6rem;
+	padding: 0px 20px 0px 20px;
+}
+
+aside {
+	float: right;
+	width: 25%;
+}
+
+aside ul li {
+	font-size: 1.1rem;
+	line-height: 1.6rem;
+	list-style: none;
+}
+
+aside p {
+	font-size: 1.1rem;
+	line-height: 1.6rem;
+	padding: 20px;
+}
+.blog_footer {
+	display: inline-block;
+	width: 100%;
+}
+/*footer */
+.footer{
+	margin-top: 10%;
+  	height: 150px;
+  	position: absolute;
+	width: 100%;
+	align-items: center;
+}
+.footer-list {
+	text-align: center;
+	margin: 0 auto;
+	width: 30%;
+}
+.footer-list ul{
+	align-items: center;
+	margin: 0 auto;
+	color: black;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.footer-logo{
+	margin-top: 5%;
+	color: black;
+	text-align: center;
+
+}
+@media screen and 
+	(min-width: 1520px) and 
+	(max-width: 1700px) {
+	.media-link img {
+			width: 90%;
+			height: 90%;
+			opacity: 1;
+	}
+	.left-header{
+			width: 25%;
+		}
+		.right-header {
+			font-size: 1.7rem;
+			width: 75%;
+		}
+	.header-list {
+		margin: 0 0.8vw;
+	}
+	.right-nav {
+		width: 70%;
+	}
+	.JoinUs ul, .Event ul {
+		width: 17%;
+		height: 15%;
+		font-size: 1.7vw;
+		}
+		.Workshop ul {
+			width: 125%;
+			left: 100%;
+			margin-top: 5%;
+			height: 300%;
+			font-size: 1.7vw;
+		}
+}
+
+@media screen and 
+	(min-width: 1051px) and 
+	(max-width: 1520px) {
+	.media-link img {
+			width: 85%;
+			height: 85%;
+			opacity: 1;
+	}
+	.left-header{
+		width: 25%;
+	}
+	.right-header {
+		font-size:1.7vw;
+		width: 75%;
+	}
+	.right-nav {
+		width: 70%;
+	}
+	.header-list {
+		margin: 0 0.8vw;
+	}
+	.footer-list {
+		width: 50%;
+	}
+	.JoinUs ul, .Event ul {
+	width: 17%;
+	height: 15%;
+	font-size: 1.7vw;
+	}
+	.Workshop ul {
+		width: 125%;
+		left: 100%;
+		margin-top: 5%;
+		height: 300%;
+		font-size: 1.7vw;
+	}
+}
+@media screen and 
+	(min-width: 450px) and 
+	(max-width: 1051px) {
+	.left-header{
+		font-size: 35px;
+		width: 70%;
+		text-align: center;
+		}
+	.right-header{
+		width: 30%;
+	}
+	.right-nav {
+		display: none;
+	}
+	.right-icons {
+		display: none;
+	}
+	.icon {
+		display: block;
+	}
+	.icon a i {
+		position: absolute;
+	}
+	.footer-list {
+		width: 70%;
+	}
+}
+
+@media screen and 
+	(min-width: 486) and
+	(max-width: 638px) {
+	.left-header{
+		font-size: 30px;
+	}
+}
+@media screen and 
+	(max-width: 486px) 
+	{
+		.left-header{
+			font-size: 35px;
+			width: 70%;
+			text-align: center;
+			}
+		.right-header{
+			width: 30%;
+		}
+		.right-nav {
+			display: none;
+		}
+		.right-icons {
+			display: none;
+		}
+		.icon {
+			display: block;
+		}
+		.icon a i {
+			position: absolute;
+		}
+		.footer-list {
+			width: 70%;
+		}
+	}

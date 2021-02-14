@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Main</title>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="read.css">
+	<link rel="stylesheet" href="event.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+	<body>
+	<!--header-->
+	<div class="header">
+		<div class='left-header'><p>SFU POLYGLOTS CLUB</p></div>
+			<div class="right-header">
+				<ul class='right-nav'>
+					<li class="header-list"><a href="index.html">HOME</a></li>
+					<li class="header-list"><a href="blog.html">BLOG</a></li>
+					<li class="header-list"><a href = "Resources.html">RESOURCES</a></li>
+					<li class="header-list">ABOUT</li>
+					<li class="header-list Event" onmouseover="show('event_list')" onmouseout="hide('event_list')"><a href="event.html">EVENT</a>
+						<ul id='event_list' style="display: none;">
+							<li><a href = "events/general_meeting.html">General Meeting</a></li>
+							<li class="Workshop" onmouseover="show('Workshop_list')" onmouseout="hide('Workshop_list')"><a
+								href = "events/General_WorkShop.html">WorkShops</a>
+								<ul id='Workshop_list'>
+									<li><a href = "events/Language_WorkShop/French_WorkShop.html">French WorkShop</a></li>
+									<li><a href = "events/">Japanese Workshop</a></li>
+									<li><a href = "events/General_WorkShop.html">Mandarin Workshop</a></li>
+								</ul>
+							</li>
+							<li><a href = "events/Language_WorkShop/French_WorkShop.html">Movie Night</a></li>
+						</ul>
+					</li>
+					<li class="header-list JoinUs" onmouseover="show('join_list')" onmouseout="hide('join_list')" ><a href="join.html">JOIN US</a>
+						<ul id='join_list'>
+							<li><a href="contact.html">CONTACT US</a></li>
+							<li><a href="contact.html">Dummy</a></li>
+							<li><a href="contact.html">Dummy2</a></li>
+						</ul>
+					</li>
+				</ul>
+				<a href="javascript:void(0)" class='icon' 
+					onclick='show_hide_mobile_bar()'>
+					<i class='hamburger-menu'></i>
+				</a>
+				<ul class="right-icons">
+					<li class="media-link">
+							<a href="https://discord.com/invite/nwvewRsCpC">
+							<img src="pictures/sns_icons/icons8-discord-48.png" alt="Discord" class="fadeImg">
+							</a>
+						</li>
+						<li class="media-link">  
+							<a href="https://www.instagram.com/sfu.polyglots_/">
+							<img src="pictures/sns_icons/icons8-instagram-48.png" alt="Instagram"class="fadeImg">
+							</a>
+						</li>
+						<li class="media-link">
+							<a href="https://twitter.com/SFUpolyglots_">
+							<img src="pictures/sns_icons/icons8-twitter-48.png" alt="Twitter"class="fadeImg">
+							</a>
+						</li>
+						<li class="media-link">
+							<a href="https://www.facebook.com/SFU-Polyglots-101958235110152">
+							<img src="pictures/sns_icons/icons8-facebook-48.png" alt="Facebook" class="fadeImg">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		<div class="main event">
+			<div class="container">
+				<div>
+					<h1>Our Events</h1>
+				</div>
+				<div class="broad_event_lists">
+					<ul>
+						<a href="events/general_meeting.html">
+							<li class="general_meeting">
+							<img src="pictures/event/meeting_no_swirl.png" class="general_meeting_image">
+							</li>
+						</a>
+						<a href="events/General_WorkShop.html">
+							<li class="general_meeting">
+							<img src="pictures/event/workshop_no_swirl.png" class="general_meeting_image">
+							</li>
+						</a>
+						<a href="events/Movie_night.html">
+							<li class="general_meeting">
+							<img src="pictures/event/movie night_no_swirl.png" class="general_meeting_image">
+							</li>
+						</a>
+					<ul>
+				</div>
+			</div>	
+		</div>
+		<div class="footer">
+			<div class="footer-list">
+				<ul>
+					<li class='footer-link'><a href="blog.html">Blog</a></li>
+					<li class='footer-link'><a href="resources.html">Resources</a></li>
+					<li class='footer-link'><a href="about.html">About</a></li>
+					<li class='footer-link'><a href="event.html">Event</a></li>
+					<li class='footer-link'><a href="join.html">Join us</a></li>
+					<li class='footer-link'><a href="contact.html">Contact us</a></li>
+				</ul>
+			</div>
+			<div class="footer-logo">Copyright &copy; 2020 SFU Polyglots</div>
+		</div>
+	</body>
+</html>

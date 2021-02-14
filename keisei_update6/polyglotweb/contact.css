@@ -1,0 +1,47 @@
+.contact {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-between;
+	width: 100%;
+	height: auto;
+}
+form {
+	margin: 0 auto;
+	align-items: center;
+	height: auto;
+	width: 70%;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+}
+input {
+ width: 20%;
+ height:  10%;
+}
+textarea {
+width: 40%;
+ height: 60%;
+}
+.submit_button {
+	background-color: #4CAF50;
+	position: relative;
+	margin-top: 10px;
+	box-shadow: 5px;
+	height: 40%;
+	color: white;
+	width: 12em;
+
+}
+
+.success {
+    border-color: #2ecc71;
+    border-width: 2px;
+}
+.error {
+    border-color: #e74c3c;
+
+}
+small {
+    color: red;
+}

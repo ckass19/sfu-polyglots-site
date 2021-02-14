@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Join</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="read.css">
+	<link rel="stylesheet" type="text/css" href="join.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class='left-header'><p>SFU POLYGLOTS CLUB</p></div>
+			<div class="right-header">
+				<ul class='right-nav'>
+					<li class="header-list"><a href="index.html">HOME</a></li>
+					<li class="header-list"><a href="blog.html">BLOG</a></li>
+					<li class="header-list"><a href = "Resources.html">RESOURCES</a></li>
+					<li class="header-list">ABOUT</li>
+					<li class="header-list Event" onmouseover="show('event_list')" onmouseout="hide('event_list')"><a href="event.html">EVENT</a>
+						<ul id='event_list' style="display: none;">
+							<li><a href = "events/general_meeting.html">General Meeting</a></li>
+							<li class="Workshop" onmouseover="show('Workshop_list')" onmouseout="hide('Workshop_list')"><a
+								href = "events/General_WorkShop.html">WorkShops</a>
+								<ul id='Workshop_list'>
+									<li><a href = "events/Language_WorkShop/French_WorkShop.html">French WorkShop</a></li>
+									<li><a href = "events/">Japanese Workshop</a></li>
+									<li><a href = "events/General_WorkShop.html">Mandarin Workshop</a></li>
+								</ul>
+							</li>
+							<li><a href = "events/Language_WorkShop/French_WorkShop.html">Movie Night</a></li>
+						</ul>
+					</li>
+					<li class="header-list JoinUs" onmouseover="show('join_list')" onmouseout="hide('join_list')" ><a href="join.html">JOIN US</a>
+						<ul id='join_list'>
+							<li><a href="contact.html">CONTACT US</a></li>
+							<li><a href="contact.html">Dummy</a></li>
+							<li><a href="contact.html">Dummy2</a></li>
+						</ul>
+					</li>
+				</ul>
+				<a href="javascript:void(0)" class='icon' 
+					onclick='show_hide_mobile_bar()'>
+					<i class='hamburger-menu'></i>
+				</a>
+				<ul class="right-icons">
+					<li class="media-link">
+							<a href="https://discord.com/invite/nwvewRsCpC">
+							<img src="pictures/sns_icons/icons8-discord-48.png" alt="Discord" class="fadeImg">
+							</a>
+						</li>
+						<li class="media-link">  
+							<a href="https://www.instagram.com/sfu.polyglots_/">
+							<img src="pictures/sns_icons/icons8-instagram-48.png" alt="Instagram"class="fadeImg">
+							</a>
+						</li>
+						<li class="media-link">
+							<a href="https://twitter.com/SFUpolyglots_">
+							<img src="pictures/sns_icons/icons8-twitter-48.png" alt="Twitter"class="fadeImg">
+							</a>
+						</li>
+						<li class="media-link">
+							<a href="https://www.facebook.com/SFU-Polyglots-101958235110152">
+							<img src="pictures/sns_icons/icons8-facebook-48.png" alt="Facebook" class="fadeImg">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		<div class="main">
+			<h1>Membership Registration Form</h1>
+				<form class='form' id='form' onsubmit="pre(e)">
+					
+				<div class="reg_form">
+					<ul>
+						<li>
+							<label>Name<span>*</span></label>
+							<input placeholder="Name" class="form_box" id=Name ></input>
+							<small style="display: none;"></small>
+						</li>
+						<li>
+							<label>Preferred Name<span>*</span></label>
+							<input placeholder="Prefferred Name"  class="form_box" id="pref_name"></input>
+							<small id="pn_small" style="display: none;"></small>
+						</li>
+						<li>
+							<label>Student ID (optional)</label>
+							<input placeholder="ID" id = 'ID' class="form_box"  onchange="IdValidation()"></input>
+							<small  id= "id_small" style="display: none;"></small>
+						</li>
+						<li>
+							<label>SFU/FIC email<span>*</span></label>
+							<input placeholder="Email" id ='Email' class="form_box"   onchange="EmailValidation()"></input>
+							<small  id= "email_small" style="display: none;"></small>
+						</li>
+						<li>
+							<label>Program of Study<span>*</span></label>
+							<select id="how_know" onchange="StudyHandler(this)">
+    							<optgroup label="">
+    								<option disabled selected>Choose Your Faculty</option>
+    							</optgroup>
+    							<option name='AS' value="Applied Science">Applied Science</option>
+    							<option name='ASS' value="Arts and Social Sciences">Arts and Social Sciences</option>
+    							<option name='BBA' value="Beedie School of Business">Beedie School of Business</option>
+    							<option name='CAT' value="Communication,Art and Technology">Communication,Art and Technology</option>
+    							<option name='ED' value="Education">Education</option>
+    							<option name='EN' value="Environment">Environment</option>
+    							<option name='HS'value="Health Sciences">Heath Sciences</option>
+    							<option name='S'value="Science">Science</option>
+							</select>
+							<small>Please fill in this form</small>
+						</li>
+						<li>
+							<label id = 'Major_label' style="display: none;">Pick your major/minor</label>
+							  <select id="AS" style="display: none;">
+								<option name='ED' value="Computing Science">Computing Science</option>
+								<option name='EN' value="Geographic Information Science">Geographic Information Science</option>
+								<option name='ED' value="Engineering Science">Engineering Science</option>
+								<option name='EN' value="Geographic Information Science">Mechatronic Systems Engineering</option>
+								<option name='ED' value="Software Systems">Software Systems</option>
+								<option name='EN' value="Sustainable Energy Engineering">Sustainable Energy Engineering</option>
+							  </select>
+							  <select id="ASS" style="display: none;">
+								<option name='ED' value="Anthropology">Anthropology</option>
+								<option name='EN' value="Behavioural Neuroscience">Behavioural Neuroscience</option>
+								<option name='ED' value="Cognitive Science">Cognitive Science</option>
+								<option name='EN' value="Criminology">Criminology</option>
+								<option name='ED' value="Economics">Economics</option>
+								<option name='EN' value="English">English</option>
+								<option name='ED' value="French">French</option>
+								<option name='EN' value="GSWS">Gender, Sexuality, and Women's Studies</option>
+								<option name='ED' value="History">History</option>
+								<option name='EN' value="Humanities">Humanities</option>
+								<option name='ED' value="Education">Education</option>
+								<option name='EN' value="Indigenous Studies">Indigenous Studies</option>
+								<option name='ED' value="International Studies">International Studies</option>
+								<option name='EN' value="Labour Studies">Labour Studies</option>
+								<option name='EN' value="Linguistics">Linguistics</option>
+								<option name='ED' value="Philosophy">Philosophy</option>
+								<option name='EN' value="Political Science">Political Science</option>
+								<option name='EN' value="Psychology">Psychology</option>
+								<option name='EN' value="Sociology">Sociology</option>
+								<option name='ED' value="World Languages and Literatures">World Languages and Literatures</option>
+								<option name='EN' value="World Literature">World Literature</option>
+							  </select>
+							  <select id="BBA" style="display: none;">
+								<option name='B' value="Business">Business</option>
+							  </select>
+							  <select id="CAT" style="display: none;">
+								<option name='EN' value="Art, Performance and Cinema Studies">Art, Performance and Cinema Studies</option>
+								<option name='EN' value="Communication">Communication</option>
+								<option name='ED' value="Education">Education</option>
+								<option name='EN' value="Creative Technologies in Digital Journalism">Creative Technologies in Digital Journalism</option>
+								<option name='ED' value="Dance">Dance</option>
+								<option name='EN' value="Film">Film</option>
+								<option name='ED' value="Interactive Arts and Technology">Interactive Arts and Technology</option>
+								<option name='EN' value="Music">Music</option>
+								<option name='ED' value="Theatre">Theatre</option>
+								<option name='EN' value="Visual Art">Visual Art</option>
+							  </select>
+							  <select id="ED" style="display: none;">
+								<option name='ED' value="Education">Education</option>
+							  </select>
+							  <select id="EN" style="display: none;">
+								<option name='ED' value="Archaeology">Archaeology</option>
+								<option name='EN' value="Environmental Science">Environmental Science</option>
+								<option name='ED' value="Geographic Information Science">Geographic Information Science</option>
+								<option name='EN' value="Global Environmental Systems">Global Environmental Systems</option>
+								<option name='ED' value="Human Geography">Human Geography</option>
+								<option name='EN' value="Physical Geography">Physical Geography</option>
+								<option name='ED' value="Resource and Environmental Management">Resource and Environmental Management</option>
+							  </select>
+							  <select id="HS" style="display: none;">
+								<option name='ED' value="Health Science">Health Science</option>
+							  </select>
+							  <select id="S" style="display: none;">
+								<option name='ED' value="Actuarial Science">Actuarial Science</option>
+								<option name='EN' value="Applied Mathematics">Applied Mathematics</option>
+								<option name='ED' value="Applied Physics">Applied Physics</option>
+								<option name='EN' value="Behavioural Neuroscience">Behavioural Neuroscience</option>
+								<option name='ED' value="Biological Physics">Biological Physics</option>
+								<option name='EN' value="Biological Sciences">Biological Sciences</option>
+								<option name='ED' value="Biomedical Physiology">Biomedical Physiology</option>
+								<option name='EN' value="Chemical Physics">Chemical Physics</option>
+								<option name='ED' value="Chemistry">Chemistry</option>
+								<option name='EN' value="Data Science">Data Science</option>
+								<option name='ED' value="Earth Sciences">Earth Sciences</option>
+								<option name='EN' value="Kinesiology">Kinesiology</option>
+								<option name='ED' value="Mathematical Physics">Mathematical Physics</option>
+								<option name='EN' value="Mathematics">Mathematics</option>
+								<option name='EN' value="Molecular Biology and Biochemistry">Molecular Biology and Biochemistry</option>
+								<option name='ED' value="Operations Research">Operations Research</option>
+								<option name='EN' value="Physics">Physics</option>
+								<option name='EN' value="Statistics">Statistics</option>
+							  </select>
+						</li>
+						<li>
+							<label>Year of study<span>*</span></label>
+							<select id="cars">
+								<optgroup label="">
+    								<option disabled selected>Choose your year</option>
+    							</optgroup>
+    							<option value="1 Year">1 Year</option>
+    							<option value="2 Year">2 Year</option>
+    							<option value="3 Year">3 Year</option>
+    							<option value="4 Year">4 Year</option>
+    							<option value="4+ Year">4+ Year</option>
+    							<option value="Graduate">Graduate student</option>
+    							<option value="I'm not a student">Not a student</option>
+  							</select>
+  							<small style="display: none;">Error meesage</small>
+						</li>
+						<li>
+							<label>Your Native Language(s)<span>*</span></label>
+							<input placeholder="Language" class="form_box"></input>
+							<input placeholder="Optional"></input>
+							<small>Please fill in language name</small>
+						</li>
+						<li>
+							<label>Language(s) That You are Fluent In<span>*</span></label>
+							<input placeholder="Language" class="form_box" ></input>
+							<input placeholder="Optional" id='option1' onclick="show2('option2')"></input>
+							<small  style="display: none;" >Please fill in language name</small>
+							<input placeholder="Optional"id='option2' style='visibility: hidden;' onclick="show2('option3')"></input>
+							<input placeholder="Optional"id='option3' style='visibility: hidden;'onclick="show2('option4')" ></input>
+							<input placeholder="Optional" id='option4' style='visibility: hidden;'></input>
+						</li>
+						<li>
+							<label>Language(s) That You Are Interested In<span>*</span></label>
+							<input placeholder="Language" class="form_box"></input>
+							<input placeholder="Optional" onclick="show2('option11')"></input>
+							<small style="display: none;" >Please fill in language name</small>
+							<input placeholder="Optional" id='option11'  style= 'visibility:  hidden;' onclick="show2('option22')"></input>
+							<input placeholder="Optional" id='option22' style='visibility:  hidden;'  onclick="show2('option33')"></input>
+							<input placeholder="Optional" id='option33'style="visibility:  hidden;" ></input>
+						</li>
+						<li>
+							<label>How did you hear about us?<span>*</span></label>
+							<select id="how_know">
+								<optgroup label="">
+    								<option disabled selected>select</option>
+    							</optgroup>
+    							<option value="SNS">SNS</option>
+    							<option value="website">SFU website</option>
+    							<option value="friends">Friends</option>
+    							<option value="from ">Others</option>
+  							</select>
+  							<small  style="display: none;">Error meesage</small>
+						</li>
+						<li>
+							<label>Are you currenty in Vancouver<span>*</span></label>
+							<input type="radio" name="yes" value='yes' id='Y'  onclick="uncheckNo()" >Yes</input>
+							<input type="radio" name="no" value='no' id='N'  onclick="uncheckYes()">No</input>
+							<small>Error meesage</small>
+						</li>
+						<li id="location" style='display: none;'>
+							<label>If your answer is no, tell us your current location</label>
+							<input placeholder="location"></input>
+							<small>Error meesage</small>
+						</li>
+					</ul>
+					<div class='button_div'>
+						<button type='submit_button' type="submit" value="Submit" id="btn">Register</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="footer">
+			<div class="footer-list">
+				<ul>
+					<li class='footer-link'><a href="blog.html">Blog</a></li>
+					<li class='footer-link'><a href="resources.html">Resources</a></li>
+					<li class='footer-link'><a href="about.html">About</a></li>
+					<li class='footer-link'><a href="event.html">Event</a></li>
+					<li class='footer-link'><a href="join.html">Join us</a></li>
+					<li class='footer-link'><a href="contact.html">Contact us</a></li>
+				</ul>
+			</div>
+			<div class="footer-logo">© 2021 SFU POLYGLOTS CLUB</div>
+		</div>
+	</body>
+</html>
