@@ -1,0 +1,155 @@
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    overflow: auto;
+    background: white;
+    border-bottom: groove;
+    border-color: black;;
+
+}
+
+ul {
+    padding: 3%;
+    margin: 0 0 0 400px;
+    list-style: none;
+}
+
+
+li {
+    float: right;
+} 
+
+li a {
+    width: 100px;
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    text-align: right;
+    font-weight: bold;
+}
+
+li a:hover{
+    background: #CDC7C3;
+}
+
+.mainpage {
+    background: url(images/homepage.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+}
+
+.logo img{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 30px;
+    background-color: white;
+    
+
+}
+
+.languages {
+
+    background-color: #b69e9e;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    margin-left: 45%;
+    margin-right: 45%;
+    border-style: solid;
+    border-color: white;
+   
+    position: relative;
+    top: 490px;
+
+}
+
+.english_logo{
+
+    text-align: center;
+    height:190px;
+    width: 100%;
+    border-bottom: groove;
+    border-bottom-color: black;
+    
+}
+
+p a {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+
+ 
+    position: relative;
+    top: 100px;
+    margin-left: 23.2%;
+    border-left-style: groove;
+    border-left: 6px solid rgb(114, 114, 253);
+    background-color: lightblue;
+    margin-right: 25.9%;
+    
+}
+.content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+
+
+
+.content img {
+    width: 100%;
+    height: 100;
+    object-fit: contain;
+}
+
+
+#Table_1, #Table_2, #Table_3, #Table_4 {
+    text-align: center;
+    
+    width: 200px;
+    height: 190px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-right: 50px;
+    float: left;
+    background-color:lightsteelblue;
+  
+}
+
+#Table_1:hover, #Table_2:hover {
+    opacity: 0.8;
+}
+
+.T_1 {
+    float: left;
+    margin-right: 0;
+}
+
+
+footer{
+    
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: groove;
+    border-top-color: black;
+    text-align: center;
+}
