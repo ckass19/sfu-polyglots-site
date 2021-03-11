@@ -78,13 +78,13 @@ a:hover {
 	margin-right: auto;
 	width: 100%;
 	text-align: center;
-	padding: 50px 20px 60px 20px;
+	padding: 20px 20px 60px 20px;
 	font-size:210%;
 	
 }
 
 .aboutus_container {
-	max-width: 500px;
+	max-width: 20%;
 	margin: auto;
 
 }
@@ -92,7 +92,7 @@ a:hover {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 100px;
+    top: 50px;
 }
 
 .content img {
@@ -104,10 +104,10 @@ a:hover {
 
 #Table_1, #Table_2, #Table_3, #Table_4 {
     text-align: center;
-    width: 350px;
-    height: 750px;
+    width: 400px;
+    height: 710px;
     border: 2px solid rgb(187, 228, 250);
-    margin-right: 50px;
+    margin-right: 5%;
     float: left;
     background-color: #c7e8ecfd;
 
@@ -116,7 +116,6 @@ a:hover {
 @media (max-width: 1200px){
 	.content {
 		display: block;
-		
 		top: 100px;
 	}
 
@@ -131,8 +130,7 @@ a:hover {
 		width: 350px;
 		height: 750px;
 		border: 2px solid rgb(187, 228, 250);
-		
-		display: flex;
+	
 		background-color: #c7e8ecfd;
 	
 	}
@@ -171,7 +169,36 @@ a:hover {
   
 }
 
+.window {
+	justify-content: center;
+	display: flex;
+}
+.backdrop {
 
+    width: 400px;
+    height: 200px;
+    position: absolute;
+	margin-top: 5%;
+	
+
+}
+
+.curtain {
+	border: 1px solid blue;
+    width: 400px;
+    height: 370px;
+    position: absolute;
+	margin-top: 10%;
+	padding: 1% 1% 1% 1%;
+	margin-left: 35%;
+	background-color: white;
+	text-align: center;
+    font-size: .9rem;
+	line-height: 1.5rem;
+	padding: 0px 10px 0px 10px;
+	
+	
+}
 
 /*Blog page part */
 
