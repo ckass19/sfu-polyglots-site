@@ -1,0 +1,147 @@
+/*
+To do:
+
+-Redesign css/html code for navbar section 
+-Make buttons on navbar oval-shaped
+-Try blue-to-white linear-gradient color for navbar
+*/
+
+
+/*******************************   Container for html code   ***********************************/
+#container {
+	background: linear-gradient(to right, #5CE1E6, #ccffff);
+	opacity: 0.8;
+	/*background: linear-gradient(-70deg, black 10%, rgba(0, 0, 0, 0.5) 80%), url('aesthetic.jpg');*/
+	color: #000080;
+	font-family: font-family: proxima-nova;
+	overflow: hidden;
+	padding: 0;
+	margin: 0 auto;
+}
+
+/*Gets rid of extra whitespace*/
+html, body{
+	margin: 0 auto;
+}
+
+/*******************************   Navbar   ***********************************/
+.ulnavbar {
+	list-style-type: none; /* Gets rid of bullet points */
+	background-color: #5CE1E6;
+	font-size: 16px;
+	letter-spacing: 1px;
+	padding: 14px 20px; /*Changes the size of the navigation bar*/
+	margin: 0; /*Gets rid of space at top of header */
+}
+
+.linavbar {
+	float: left; /* Makes the navbar horizontal instead of vertical! */
+}
+
+.homeButton{
+	background-color: #5CE1E6;
+	border: none; /* Remove borders */
+	font-size: 16px; /* Sets font size for 'Home'*/
+	cursor: pointer; /* Mouse pointer on hover */
+	text-decoration: none;
+}
+
+/*Hover styles for the 'Home' button and icon*/
+.homeButton:hover{
+	color: hotpink;
+}
+
+.homeIcon{
+	float: left; /*Places home icon to the left of 'Home' text */
+	position: relative; /*Creates space between icon & 'Home' text */
+	right: 5px;	/*Creates space between icon & 'Home' text */
+}
+
+#clubLogo{
+	float: left;
+	height: 55px;
+	width: 55px;
+/*	position: 
+	display: block;	*/
+}
+
+/*Displays 'Contact' on the right of the navbar*/
+.topnav-right {
+	float: right;
+}
+
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+	border-radius: 50%;
+}
+
+.fa-instagram {
+	background: #125688;
+	color: white;
+	border-radius: 50%;
+}
+
+
+/*******************************   Dropdown menu   ***********************************/
+li a, .adropdownbutton {
+	display: inline-block;
+	color: #000080;	/*Changes the font color of navbar items */
+	text-align: center;
+	padding: 10px 14px;
+	text-decoration: none;
+	border-style: groove;
+	border: 2px #000080;
+	border-radius: 4px;
+}
+
+li a:hover, .lidropdown:hover .adropdownbutton{
+color: hotpink;
+}
+
+li.lidropdown {
+	display: inline-block;
+}
+
+.dropdowncontent {
+	display: none;
+	position: absolute; /*When absolute with .limovetext, dropdown menu stops working */
+	/*Delete .limovetext and it works again */
+	background-color: #5CE1E6;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0,0.2);
+	z-index: 1;
+/*	min-width: 200px; /*Adds width to dropdown menu content */
+}
+
+.dropdowncontent a{
+	color: navy;
+	font-size: smaller;
+	padding: 10px 14px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdowncontent a:hover {
+	opacity: 0.6;
+	/*background-color: yellow;*/
+}
+
+.lidropdown:hover .dropdowncontent {
+	display: block;
+}
+
+
+/* Centering navbar */
+/*
+#navbar{
+	clear: left;
+	display: block;
+	width: 100%;
+	position: relative;
+}
+#navbar li {
+position: relative;
+left: 200px;
+}*/
+
