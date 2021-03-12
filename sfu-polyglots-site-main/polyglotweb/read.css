@@ -5,6 +5,7 @@
 body {
 	background-color: hsl(0, 0%, 100%);
 	color: #6C716C;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 li{
@@ -170,34 +171,58 @@ a:hover {
 }
 
 .window {
-	justify-content: center;
+	height: 100%;
+	width: 100%;
+	justify-content: space-around;
 	display: flex;
 }
 .backdrop {
-
-    width: 400px;
-    height: 200px;
+	width: 100%;
+	height: 100%;
     position: absolute;
 	margin-top: 5%;
-	
+	margin-left: 40%;
 
+}
+.keisei {
+	height: 47%;
+	width: 25%;
+	margin: auto;
+	display: block;
+	z-index: 0;
+}
+
+.athena {
+	height: 47%;
+	width: 25%;
+
+	display: block;
+	z-index: 0;
 }
 
 .curtain {
 	border: 1px solid blue;
-    width: 400px;
-    height: 370px;
+    width: 28%;
+    height: 40%;
     position: absolute;
-	margin-top: 10%;
-	padding: 1% 1% 1% 1%;
-	margin-left: 35%;
+    top: 65%;
+    left: 0;
+	right: 5%;
+    margin: 0 auto;
+    display: block;
 	background-color: white;
 	text-align: center;
     font-size: .9rem;
 	line-height: 1.5rem;
-	padding: 0px 10px 0px 10px;
-	
-	
+	z-index: 1;
+}
+
+.keisei_paragraph{
+	right: -40%;
+}
+
+.athena_paragraph{
+	right: -15%;
 }
 
 /*Blog page part */
@@ -208,9 +233,7 @@ a:hover {
 }
 
 
-body {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+
 
 main {
 	float: left;
