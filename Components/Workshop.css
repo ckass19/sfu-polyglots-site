@@ -1,0 +1,23 @@
+.workshop_img {
+	border: 2px solid #000;
+	object-fit: cover;
+	max-width: 100%;
+	margin: 0 auto;
+}
+.workshop_list{
+    height: 60%;
+    width: 60%;
+    text-align: center;
+    
+}
+.workshop_list p {
+    font-size: 40px;
+}
+.workshops{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+}

@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Home",
+        "link": ""
+    },
+    {
+        "name": "BLOG",
+        "link": "Blog"
+    },
+    {
+        "name": "RESOURCES",
+        "link": ""
+    },
+    {
+        "name": "ABOUT",
+        "link": "About"
+    },
+    {
+        "name": "EVENT",
+        "link": "Events",
+        "subname": [
+            "GeneralMeeting",
+            "WorkShops",
+            "MovieNight"
+        ],
+        "supersub": [
+            "FrenchWorkshop",
+            "JapaneseWorkshop",
+            "KoreanWorkshop",
+            "RussianWorkshop",
+            "SpanishWorkshop"
+        ],
+        "superCompo": [
+            null,
+            null,
+            null,
+            null,
+            null
+        ]
+    },
+    {
+        "name": "JOIN US",
+        "link": "Join",
+        "subname": [
+            "Contact",
+            "X",
+            "Y"
+        ]
+    }
+]

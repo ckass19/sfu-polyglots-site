@@ -1,0 +1,79 @@
+[ 
+    {
+        "labelname": "Name",
+        "paceholdername": "Name",
+        "inputId": "Name",
+        "smallId": "",
+        "warning": "Please"
+    },
+    {
+        "labelname": "Preferred Name",
+        "paceholdername": "preferred Name",
+        "inputId": "pref_name",
+        "smallId": "pn_small",
+        "warning": "please"
+    },
+    {
+        "labelname": "Student ID (optional)",
+        "paceholdername": "ID",
+        "inputId": "ID",
+        "smallId": "id_small",
+        "warning": "Please"
+    },
+    {
+        "labelname": "SFU/FIC email",
+        "paceholdername": "Email",
+        "inputId": "Email",
+        "smallId": "email_small",
+        "warning": "Please"
+    },
+    {
+        "labelname": "Program of Study",
+        "paceholdername": "preferred Name",
+        "inputId": "pref_name",
+        "smallId": "pn_small",
+        "warning": "Please"
+    },
+    {
+        "labelname": "Year of study",
+        "paceholdername": "Name",
+        "inputId": "Name",
+        "smallId": "",
+        "warning": "Please pick year of study"
+    },
+    {
+        "labelname": "Your Native Language(s)",
+        "paceholdername": "preferred Name",
+        "inputId": "pref_name",
+        "smallId": "pn_small",
+        "warning": "please pick your Native language"
+    },
+    {
+        "labelname": "Language(s) That You are Fluent In",
+        "paceholdername": "Language(s)",
+        "inputId": "ID",
+        "smallId": "id_small",
+        "warning": "please"
+    },
+    {
+        "labelname": "Language(s) That You Are Interested In",
+        "paceholdername": "Language(s)",
+        "inputId": "Email",
+        "smallId": "email_small",
+        "warning": "please"
+    },
+    {
+        "labelname": "How did you hear about us?",
+        "paceholdername": "",
+        "inputId": "pref_name",
+        "smallId": "pn_small",
+        "warning": ""
+    },
+    {
+        "labelname": "Are you currently in Vancouver?",
+        "paceholdername": "preferred Name",
+        "inputId": "pref_name",
+        "smallId": "pn_small",
+        "warning": ""
+    }
+]

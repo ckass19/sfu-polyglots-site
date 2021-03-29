@@ -1,0 +1,51 @@
+.reg_form li {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top:  40px;
+}
+.main_contact{
+    height: 1000px;
+}
+h1{
+    text-align: center;
+}
+.reg_form {
+    align-items: center;
+    justify-content: center;
+}
+.reg_form  ul{
+    width: 50%;
+    margin: 0 auto;
+}
+.button_div {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+button {
+    background-color: lightblue;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 15%;
+    height: 60%;
+    color: white;
+    font-size: 20px;;
+}
+button:hover {
+    opacity: 0.7;
+}
+.Major{
+    display: none;
+}
+.success {
+    border-color: #2ecc71;
+    border-width: 2px;
+}
+.error {
+    border-color: #e74c3c;
+
+}
+small {
+    color: red;
+}
