@@ -1,0 +1,69 @@
+.reg_form li {
+    display: block;
+    width: 100%;
+    margin-bottom: 2.7%;
+    margin-top:  5.3%;
+}
+/* registration forms */
+.reg_form li label, li input{
+    width: 30%;
+    font-size: 1.1vw;
+}
+#Y,#N {
+    width: 15%;
+    height: 1em;
+
+}
+.reg_form li select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px;
+    width: 50%;
+    font-size: 1.1vw;
+    outline: : none;
+    border: 1px solid #d5dbd9;
+}
+.main_contact{
+    height: 1000px;
+}
+h1{
+    text-align: center;
+}
+.reg_form {
+    align-items: center;
+    justify-content: center;
+}
+.reg_form  ul{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.button_div {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+button {
+    background-color: lightblue;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 15%;
+    height: 60%;
+    color: white;
+    font-size: 20px;;
+}
+button:hover {
+    opacity: 0.7;
+}
+.success {
+    border-color: #2ecc71;
+    border-width: 2px;
+}
+.error {
+    border-color: #e74c3c;
+
+}
+small {
+    color: red;
+}

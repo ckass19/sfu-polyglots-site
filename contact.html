@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="read.css">
+	<link rel="stylesheet" type="text/css" href="contact.css">
+	<script type="text/javascript" src="index.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body>
+	<div class="header">
+		<div class='left-header'><img src="pictures/top/SFUPolyglotsLogo.png" id="clubLogo"></div>
+			<div class="right-header">
+				<ul class='right-nav'>
+					<li class="header-list"><a href="index.html">HOME</a></li>
+					<li class="header-list"><a href = "Resources.html">RESOURCES</a></li>
+					<li class="header-list"><a href="about.html">ABOUT</a></li>
+					<li class="header-list Event" onmouseover="show('event_list')" onmouseout="hide('event_list')"><a href="event.html">EVENT</a>
+						<ul id='event_list'>
+							<li><a href = "events/general_meeting.html">General Meeting</a></li>
+							<li class="Workshop" onmouseover="show('Workshop_list')" onmouseout="hide('Workshop_list')"><a
+								href = "events/General_WorkShop.html">WorkShops</a>
+								<ul id='Workshop_list'>
+									<li><a href = "events/Language_WorkShop/French_WorkShop.html">French Workshop</a></li>
+									<li><a href = "events/">Japanese Workshop</a></li>
+									<li><a href = "events/General_WorkShop.html">Mandarin Workshop</a></li>
+								</ul>
+							</li>
+							<li><a href = "events/movie_night.html">Movie Night</a></li>
+						</ul>
+					</li>
+					<li class="header-list JoinUs"><a href="join.html">JOIN</a>
+					<li id='header-list'><a href="contact.html">CONTACT US</a></li>
+				</ul>
+				<a href="javascript:void(0)" class='icon' 
+					onclick='show_mobile_bar()'>
+					<i class='hamburger-menu'></i>
+				</a>
+				<ul class="right-icons">
+					<li class="media-link">
+							<a href="https://discord.com/invite/nwvewRsCpC">
+							<img src="pictures/sns_icons/discord.png" alt="Discord" class="fadeImg">
+							</a>
+						</li>
+						<li class="media-link">  
+							<a href="https://www.instagram.com/sfu.polyglot/">
+							<img src="pictures/sns_icons/instagram.png" alt="Instagram"class="fadeImg">
+							</a>
+						</li>
+						<li class="media-link">
+							<a href="https://www.facebook.com/SFU-Polyglots-101958235110152">
+							<img src="pictures/sns_icons/facebook.png" alt="Facebook" class="fadeImg">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='navbar-mobile' id='navbar-mobile'>
+		<a href="javascript:void(0)" class="closebtn" onclick="hide_mobile_bar()">&times;</a>
+		<ul>
+			<li><a href="index.html" class='side_navigation_bar'>HOME</a></li>
+			<li><a href="resources.html" class='side_navigation_bar'   >RESOURCES</a></li>
+			<li><a href="about.html"  class='side_navigation_bar'  >ABOUT</a></li>
+			<li><a href="event.html"   class='side_navigation_bar' >EVENT</a></li>
+			<li><a href="join.html"  class='side_navigation_bar'>JOIN</a></li>
+			<li><a href="contact.html"  class='side_navigation_bar'>CONTACT US</a></li>
+		</ul>
+	</div>
+		<div class='navbar-mobile' id='navbar-mobile'>
+			<a href="javascript:void(0)" class="closebtn" onclick="hide_mobile_bar()">&times;</a>
+			<ul>
+				<li><a href="index.html" class='side_navigation_bar'>HOME</a></li>
+				<li><a href="resources.html" class='side_navigation_bar'   >RESOURCES</a></li>
+				<li><a href="about.html"  class='side_navigation_bar'  >ABOUT</a></li>
+				<li><a href="event.html"   class='side_navigation_bar' >EVENT</a></li>
+				<li><a href="join.html"  class='side_navigation_bar'  >JOIN US</a></li>
+			</ul>
+		</div>
+		<div class="main contact " style="margin: 0 auto;">
+			<h1>Contact US!</h1>
+			<ul>
+				<li>Email:<a href="mailto:sfu.polyglot@gmail.com">sfu.polyglot@gmail.com</a></li>
+				<li>Facebook account: <a href="https://www.facebook.com/SFU-Polyglots-101958235110152">click here</a></li>
+				<li>Discord server:<a href="https://discord.com/invite/nwvewRsCpC">click here</a></li></li>
+				<li>Instagram account:<a href="https://www.instagram.com/sfu.polyglot/">click here</a></li>
+			</ul>
+			<form id='user-question' name="form" onsubmit="validations()">
+ 				<label for="form">Name:</label><br>
+				<input type="text" id="form" name="Name" placeholder="Name" class="user-form"><br>
+				<small  id= "name_small"    style="display: none;"></small>
+  				<label   for="form">Email:</label><br>
+				<input type="text" id="form" name="Email" placeholder="Email" class="user-form"><br>
+				<small id= "email_small" style="display: none;"></small>
+				<label for="message">Message:</label><br>
+				<textarea type="text" id="form" name="Message" placeholder="Message" class="user-form" ></textarea> 
+				<small  id= "message_small" style="display: none;"></small>
+				<input class="submit_button" type="submit" id="btn" value="Submit" >
+			</form>
+			<div id="msg">
+				<pre></pre>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-list">
+				<ul>
+					<li class='footer-link'><a href="resources.html">Resources</a></li>
+					<li class='footer-link'><a href="about.html">About</a></li>
+					<li class='footer-link'><a href="event.html">Event</a></li>
+					<li class='footer-link'><a href="join.html">Join us</a></li>
+					<li class='footer-link'><a href="contact.html">Contact us</a></li>
+				</ul>
+			</div>
+			<div class="footer-logo">Copyright &copy; 2020 SFU Polyglots</div>
+		</div>
+	</body>
+</html>

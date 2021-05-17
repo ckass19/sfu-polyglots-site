@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Main</title>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="read.css">
+	<script src="index.js"></script>
+</head>
+	<body id='body'>
+	<!--header-->
+	<div class="header">
+		<div class='left-header'><img src="pictures/top/SFUPolyglotsLogo.png" id="clubLogo"></div>
+			<div class="right-header">
+				<ul class='right-nav'>
+					<li class="header-list"><a href="index.html">HOME</a></li>
+					<li class="header-list"><a href = "Resources.html">RESOURCES</a></li>
+					<li class="header-list"><a href="about.html">ABOUT</a></li>
+					<li class="header-list Event" onmouseover="show('event_list')" onmouseout="hide('event_list')"><a href="event.html">EVENT</a>
+						<ul id='event_list'>
+							<li><a href = "events/general_meeting.html">General Meeting</a></li>
+							<li class="Workshop" onmouseover="show('Workshop_list')" onmouseout="hide('Workshop_list')"><a
+								href = "events/General_WorkShop.html">WorkShops</a>
+								<ul id='Workshop_list'>
+									<li><a href = "events/Language_WorkShop/French_WorkShop.html">French Workshop</a></li>
+									<li><a href = "events/">Japanese Workshop</a></li>
+									<li><a href = "events/General_WorkShop.html">Mandarin Workshop</a></li>
+								</ul>
+							</li>
+							<li><a href = "events/movie_night.html">Movie Night</a></li>
+						</ul>
+					</li>
+					<li class="header-list JoinUs"><a href="join.html">JOIN</a>
+					<li id='header-list'><a href="contact.html">CONTACT US</a></li>
+				</ul>
+				<a href="javascript:void(0)" class='icon' 
+					onclick='show_mobile_bar()'>
+					<i class='hamburger-menu'></i>
+				</a>
+				<ul class="right-icons">
+					<li class="media-link">
+							<a href="https://discord.com/invite/nwvewRsCpC">
+							<img src="pictures/sns_icons/discord.png" alt="Discord" class="fadeImg">
+							</a>
+						</li>
+						<li class="media-link">  
+							<a href="https://www.instagram.com/sfu.polyglot/">
+							<img src="pictures/sns_icons/instagram.png" alt="Instagram"class="fadeImg">
+							</a>
+						</li>
+						<li class="media-link">
+							<a href="https://www.facebook.com/SFU-Polyglots-101958235110152">
+							<img src="pictures/sns_icons/facebook.png" alt="Facebook" class="fadeImg">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='navbar-mobile' id='navbar-mobile'>
+		<a href="javascript:void(0)" class="closebtn" onclick="hide_mobile_bar()">&times;</a>
+		<ul>
+			<li><a href="index.html" class='side_navigation_bar'>HOME</a></li>
+			<li><a href="resources.html" class='side_navigation_bar'   >RESOURCES</a></li>
+			<li><a href="about.html"  class='side_navigation_bar'  >ABOUT</a></li>
+			<li><a href="event.html"   class='side_navigation_bar' >EVENT</a></li>
+			<li><a href="join.html"  class='side_navigation_bar'>JOIN</a></li>
+			<li><a href="contact.html"  class='side_navigation_bar'>CONTACT US</a></li>
+		</ul>
+	</div>
+		<div class="main">
+			<div class="container">
+				<h1>Welcome to SFU Polyglots Club</h1>
+				<a href="join.html" class="btn join">Join</a>
+			</div>	
+		</div>
+		<div class="footer">
+			<div class="footer-list">
+				<ul>
+					<li class='footer-link'><a href="resources.html">Resources</a></li>
+					<li class='footer-link'><a href="about.html">About</a></li>
+					<li class='footer-link'><a href="event.html">Event</a></li>
+					<li class='footer-link'><a href="join.html">Join</a></li>
+					<li class='footer-link'><a href="contact.html">Contact us</a></li>
+				</ul>
+			</div>
+			<div class="footer-logo">Copyright &copy; 2020 SFU Polyglots</div>
+		</div>
+	</body>
+</html>

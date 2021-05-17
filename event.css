@@ -1,0 +1,149 @@
+.broad_event_lists ul{
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 0;
+}
+.broad_event_lists a{
+	height: auto;
+	width:  33%;
+	align-items: center;
+}
+.general_meeting {
+	height: auto;
+	width: center;
+	align-items: center;
+}
+.general_meeting_image {
+	border: 2px solid #000;
+	object-fit: cover;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	margin: 0 auto;
+
+}
+@media screen and 
+	(min-width: 1025px)
+	and
+	(max-width: 1440px) {
+		.general_meeting_image {
+			width: 85%;
+		}
+	}
+@media screen and 
+	(min-width: 736px)
+	and
+	(max-width: 1025px) {
+		.event {
+			height: 75vh;
+		}
+		.broad_event_lists ul {
+			top: 20%;
+			width: 85%;
+			margin: 0 auto;
+			padding: 0;
+			display: block;
+			align-items: center;
+			justify-content: center;
+			
+		}
+		.broad_event_lists li {
+			border:  none;
+			width: 80%;
+			object-fit: cover;
+			margin:  15% auto;
+		}
+		.general_meeting_image {
+			height: 304px; 
+			width: 483px;
+			margin: 0 auto;
+		}
+	}
+@media screen and 
+	(min-width: 414px)
+	and
+	(max-width: 736px) {
+		.event {
+			height: 90vh;
+		}
+		.broad_event_lists ul {
+			top: 20%;
+			width: 85%;
+			margin: 0 auto;
+			padding: 0;
+			display: block;
+			align-items: center;
+			justify-content: center;
+			
+		}
+		.broad_event_lists li {
+			width: 100%;
+			object-fit: cover;
+			margin-bottom: 10%;
+			
+		}
+		.general_meeting_image {
+			height: 100%;
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+	@media screen and 
+	(min-width: 320px)
+	and
+	(max-width: 414px) {
+		.event {
+			height: 90vh;
+		}
+		.broad_event_lists ul {
+			top: 20%;
+			width: 85%;
+			margin: 0 auto;
+			padding: 0;
+			display: block;
+			align-items: center;
+			justify-content: center;
+			
+		}
+		.broad_event_lists li {
+			width: 100%;
+			object-fit: cover;
+			margin-bottom: 10%;
+			
+		}
+		.general_meeting_image {
+			height: 100%;
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+	@media screen and 
+	(max-width: 320px) {
+		.broad_event_lists ul {
+			margin-top: 20%;
+		}
+		.broad_event_lists ul {
+			top: 30%;
+			width: 80%;
+			margin: 0 auto;
+			padding: 0;
+			display: block;
+			align-items: center;
+			justify-content: center;
+			
+		}
+		.broad_event_lists li {
+			height: 78%;
+			width: 100%;
+			object-fit: cover;
+			margin-bottom: 10%;
+			
+		}
+		.general_meeting_image {
+			height: 100%;
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
