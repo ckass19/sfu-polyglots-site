@@ -6,23 +6,8 @@
 	<link rel="stylesheet" href="read.css">
 	<link rel="stylesheet" type="text/css" href="join.css">
 	<script type="text/javascript" src="index.js"></script>
-	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
-	</script>
-	<script>
-		function FormSubmission(){
-		$.ajax({
-        url:'https://api.apispreadsheets.com/data/12225/',
-        type:'post',
-        data:$("#form").serializeArray(),
-        success: function(){
-          alert("Form Data Submitted :)")
-        },
-        error: function(){
-          alert("There was an error :(")
-        }
-   		 });
-		}
-	</script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="header">
@@ -86,8 +71,7 @@
 	</div>
 	<div class="main">
 			<h1>Membership Registration Form</h1>
-				<form class='form' id='form' onsubmit="submissionVal()" >	
-				<div class="reg_form">
+				<form class='reg_form' id='myForm'>	
 					<ul>
 						<li>
 							<label>Name<span>*</span></label>
@@ -111,129 +95,132 @@
 						</li>
 						<li>
 							<label>Program of Study<span>*</span></label>
-							<select id="how_know" onchange="StudyHandler(this); faculityVal()">
+							<select id="how_know" name="faculty" onchange="StudyHandler(this); faculityVal()">
     							<optgroup label="">
     								<option disabled selected>Choose Your Faculty</option>
     							</optgroup>
-    							<option name='AS' value="Applied Science">Applied Science</option>
-    							<option name='ASS' value="Arts and Social Sciences">Arts and Social Sciences</option>
-    							<option name='BBA' value="Beedie School of Business">Beedie School of Business</option>
-    							<option name='CAT' value="Communication,Art and Technology">Communication,Art and Technology</option>
-    							<option name='ED' value="Education">Education</option>
-    							<option name='EN' value="Environment">Environment</option>
-    							<option name='HS'value="Health Sciences">Health Sciences</option>
-    							<option name='S'value="Science">Science</option>
+    							<option value="Applied Science">Applied Science</option>
+    							<option value="Arts and Social Sciences">Arts and Social Sciences</option>
+    							<option value="Beedie School of Business">Beedie School of Business</option>
+    							<option value="Communication,Art and Technology">Communication,Art and Technology</option>
+    							<option value="Education">Education</option>
+    							<option value="Environment">Environment</option>
+    							<option value="Health Sciences">Health Sciences</option>
+    							<option value="Science">Science</option>
 							</select>
 							<small id = "facrity_small"style="display: none;" >Please select your faculty</small>
 						</li>
 						<li>
 							<label id = 'Major_label' style="display: none;">Pick your program</label>
-							  <select id="AS" style="display: none;">
+							  <select id="AS" name='major' style="display: none;">
 							  	<optgroup label="">
     								<option disabled selected>Choose Your Program</option>
     							</optgroup>
-								<option name='' value="Computing Science">Computing Science</option>
-								<option name='EN' value="Geographic Information Science">Geographic Information Science</option>
-								<option name='ED' value="Engineering Science">Engineering Science</option>
-								<option name='EN' value="Geographic Information Science">Mechatronic Systems Engineering</option>
-								<option name='ED' value="Software Systems">Software Systems</option>
-								<option name='EN' value="Sustainable Energy Engineering">Sustainable Energy Engineering</option>
+								<option value="Computing Science">Computing Science</option>
+								<option value="Geographic Information Science">Geographic Information Science</option>
+								<option value="Engineering Science">Engineering Science</option>
+								<option value="Geographic Information Science">Mechatronic Systems Engineering</option>
+								<option value="Software Systems">Software Systems</option>
+								<option value="Sustainable Energy Engineering">Sustainable Energy Engineering</option>
 							  </select>
-							  <select id="ASS" style="display: none;">
+							  <select id="ASS" name='major' style="display: none;">
 							  	<optgroup label="">
     								<option disabled selected>Choose Your Program</option>
     							</optgroup>
-								<option name='ED' value="Anthropology">Anthropology</option>
-								<option name='EN' value="Behavioural Neuroscience">Behavioural Neuroscience</option>
-								<option name='ED' value="Cognitive Science">Cognitive Science</option>
-								<option name='EN' value="Criminology">Criminology</option>
-								<option name='ED' value="Economics">Economics</option>
-								<option name='EN' value="English">English</option>
-								<option name='ED' value="French">French</option>
-								<option name='EN' value="GSWS">Gender, Sexuality, and Women's Studies</option>
-								<option name='ED' value="History">History</option>
-								<option name='EN' value="Humanities">Humanities</option>
-								<option name='ED' value="Education">Education</option>
-								<option name='EN' value="Indigenous Studies">Indigenous Studies</option>
-								<option name='ED' value="International Studies">International Studies</option>
-								<option name='EN' value="Labour Studies">Labour Studies</option>
-								<option name='EN' value="Linguistics">Linguistics</option>
-								<option name='ED' value="Philosophy">Philosophy</option>
-								<option name='EN' value="Political Science">Political Science</option>
-								<option name='EN' value="Psychology">Psychology</option>
-								<option name='EN' value="Sociology">Sociology</option>
-								<option name='ED' value="World Languages and Literatures">World Languages and Literatures</option>
-								<option name='EN' value="World Literature">World Literature</option>
-							  </select>
-							  <select id="BBA" style="display: none;">
-								<option name='B' value="Business">Business</option>
-							  </select>
-							  <select id="CAT" style="display: none;">
+								<option value="Anthropology">Anthropology</option>
+								<option value="Behavioural Neuroscience">Behavioural Neuroscience</option>
+								<option value="Cognitive Science">Cognitive Science</option>
+								<option value="Criminology">Criminology</option>
+								<option value="Economics">Economics</option>
+								<option value="English">English</option>
+								<option value="French">French</option>
+								<option value="GSWS">Gender, Sexuality, and Women's Studies</option>
+								<option value="History">History</option>
+								<option value="Humanities">Humanities</option>
+								<option value="Education">Education</option>
+								<option value="Indigenous Studies">Indigenous Studies</option>
+								<option value="International Studies">International Studies</option>
+								<option value="Labour Studies">Labour Studies</option>
+								<option value="Linguistics">Linguistics</option>
+								<option value="Philosophy">Philosophy</option>
+								<option value="Political Science">Political Science</option>
+								<option value="Psychology">Psychology</option>
+								<option value="Sociology">Sociology</option>
+								<option value="World Languages and Literatures">World Languages and Literatures</option>
+								<option value="World Literature">World Literature</option>
+							  </select> 
+							  <select id="BBA" name='major' style="display: none;">
 							  	<optgroup label="">
     								<option disabled selected>Choose Your Program</option>
     							</optgroup>
-								<option name='EN' value="Art, Performance and Cinema Studies">Art, Performance and Cinema Studies</option>
-								<option name='EN' value="Communication">Communication</option>
-								<option name='ED' value="Education">Education</option>
-								<option name='EN' value="Creative Technologies in Digital Journalism">Creative Technologies in Digital Journalism</option>
-								<option name='ED' value="Dance">Dance</option>
-								<option name='EN' value="Film">Film</option>
-								<option name='ED' value="Interactive Arts and Technology">Interactive Arts and Technology</option>
-								<option name='EN' value="Music">Music</option>
-								<option name='ED' value="Theatre">Theatre</option>
-								<option name='EN' value="Visual Art">Visual Art</option>
+							  	<option value="Business">Business</option>
 							  </select>
-							  <select id="ED" style="display: none;">
+							  <select id="CAT" name='major' style="display: none;">
 							  	<optgroup label="">
     								<option disabled selected>Choose Your Program</option>
     							</optgroup>
-								<option name='ED' value="Education">Education</option>
+								<option value="Art, Performance and Cinema Studies">Art, Performance and Cinema Studies</option>
+								<option value="Communication">Communication</option>
+								<option value="Education">Education</option>
+								<option value="Creative Technologies in Digital Journalism">Creative Technologies in Digital Journalism</option>
+								<option value="Dance">Dance</option>
+								<option value="Film">Film</option>
+								<option value="Interactive Arts and Technology">Interactive Arts and Technology</option>
+								<option value="Music">Music</option>
+								<option value="Theatre">Theatre</option>
+								<option value="Visual Art">Visual Art</option>
 							  </select>
-							  <select id="EN" style="display: none;" aria-labelledby="jobLabel">
+							  <select id="ED" name='major' style="display: none;">
 							  	<optgroup label="">
     								<option disabled selected>Choose Your Program</option>
     							</optgroup>
-								<option name='ED' value="Archaeology">Archaeology</option>
-								<option name='EN' value="Environmental Science">Environmental Science</option>
-								<option name='ED' value="Geographic Information Science">Geographic Information Science</option>
-								<option name='EN' value="Global Environmental Systems">Global Environmental Systems</option>
-								<option name='ED' value="Human Geography">Human Geography</option>
-								<option name='EN' value="Physical Geography">Physical Geography</option>
-								<option name='ED' value="Resource and Environmental Management">Resource and Environmental Management</option>
+								<option  value="Education">Education</option>
 							  </select>
-							  <select id="HS" style="display: none;">
+							  <select id="EN" name='major' style="display: none;" aria-labelledby="jobLabel">
 							  	<optgroup label="">
     								<option disabled selected>Choose Your Program</option>
     							</optgroup>
-								<option name='ED' value="Health Science">Health Science</option>
+								<option value="Archaeology">Archaeology</option>
+								<option  value="Environmental Science">Environmental Science</option>
+								<option value="Geographic Information Science">Geographic Information Science</option>
+								<option value="Global Environmental Systems">Global Environmental Systems</option>
+								<option  value="Human Geography">Human Geography</option>
+								<option value="Physical Geography">Physical Geography</option>
+								<option  value="Resource and Environmental Management">Resource and Environmental Management</option>
 							  </select>
-							  <select id="S" style="display: none;">
+							  <select id="HS" name='major' style="display: none;">
+							  	<optgroup label="">
+    								<option disabled selected>Choose Your Program</option>
+    								<option  value="Heath Science">Heath Science</option>
+    							</optgroup>
+							  </select>
+							  <select id="S" name='major' style="display: none;">
 							  	<optgroup label="">
     								<option disabled selected>Choose Your Program</option>
     							</optgroup>
-								<option name='ED' value="Actuarial Science">Actuarial Science</option>
-								<option name='EN' value="Applied Mathematics">Applied Mathematics</option>
-								<option name='ED' value="Applied Physics">Applied Physics</option>
-								<option name='EN' value="Behavioural Neuroscience">Behavioural Neuroscience</option>
-								<option name='ED' value="Biological Physics">Biological Physics</option>
-								<option name='EN' value="Biological Sciences">Biological Sciences</option>
-								<option name='ED' value="Biomedical Physiology">Biomedical Physiology</option>
-								<option name='EN' value="Chemical Physics">Chemical Physics</option>
-								<option name='ED' value="Chemistry">Chemistry</option>
-								<option name='EN' value="Data Science">Data Science</option>
-								<option name='ED' value="Earth Sciences">Earth Sciences</option>
-								<option name='EN' value="Kinesiology">Kinesiology</option>
-								<option name='ED' value="Mathematical Physics">Mathematical Physics</option>
-								<option name='EN' value="Mathematics">Mathematics</option>
-								<option name='EN' value="Molecular Biology and Biochemistry">Molecular Biology and Biochemistry</option>
-								<option name='ED' value="Operations Research">Operations Research</option>
-								<option name='EN' value="Physics">Physics</option>
-								<option name='EN' value="Statistics">Statistics</option>
+								<option value="Actuarial Science">Actuarial Science</option>
+								<option value="Applied Mathematics">Applied Mathematics</option>
+								<option value="Applied Physics">Applied Physics</option>
+								<option value="Behavioural Neuroscience">Behavioural Neuroscience</option>
+								<option value="Biological Physics">Biological Physics</option>
+								<option value="Biological Sciences">Biological Sciences</option>
+								<option value="Biomedical Physiology">Biomedical Physiology</option>
+								<option value="Chemical Physics">Chemical Physics</option>
+								<option value="Chemistry">Chemistry</option>
+								<option value="Data Science">Data Science</option>
+								<option value="Earth Sciences">Earth Sciences</option>
+								<option value="Kinesiology">Kinesiology</option>
+								<option value="Mathematical Physics">Mathematical Physics</option>
+								<option value="Mathematics">Mathematics</option>
+								<option value="Molecular Biology and Biochemistry">Molecular Biology and Biochemistry</option>
+								<option value="Operations Research">Operations Research</option>
+								<option value="Physics">Physics</option>
+								<option value="Statistics">Statistics</option>
 							  </select>
 						</li>
 						<li>
 							<label>Year of study<span>*</span></label>
-							<select id="cars">
+							<select id="cars" name="year_of_study" onchange="yearVal()">
 								<optgroup label="">
     								<option disabled selected>Choose your year</option>
     							</optgroup>
@@ -249,7 +236,7 @@
 						</li>
 						<li>
 							<label>Language(s) That You are Fluent In<span>*</span></label>
-							<input placeholder="Language" class="form_box" id="fluent_lang"></input>
+							<input placeholder="Language" class="form_box" id="fluent_lang" name="f_langue" onchange="FluentLangVal()"></input>
 							<input placeholder="Optional" id='option1' onclick="show2('option2')"></input>
 							<small  style="display: none;" >Please fill in language name</small>
 							<input placeholder="Optional"id='option2' style='visibility: hidden;' onclick="show2('option3')"></input>
@@ -259,7 +246,7 @@
 						</li>
 						<li>
 							<label>Language(s) That You Are Interested In<span>*</span></label>
-							<input placeholder="Language" id="interested_lang"class="form_box"></input>
+							<input placeholder="Language" id="interested_lang"class="form_box" name="i_langue" onchange="InterestedLangVal()"></input>
 							<input placeholder="Optional" onclick="show2('option11')"></input>
 							<small style="display: none;" >Please fill in language name</small>
 							<input placeholder="Optional" id='option11'  style= 'visibility:  hidden;' onclick="show2('option22')"></input>
@@ -269,24 +256,23 @@
 						</li>
 						<li>
 							<label>How did you hear about us?<span>*</span></label>
-							<select id="how_hear" onchange="How_hearVal()">
+							<select id="how_hear" name="how_hear_us" onchange="How_hearVal()">
 								<optgroup label="">
     								<option disabled selected>select</option>
     							</optgroup>
-    							<option value="facebook">Facebook</option>
-    							<option value="instagram">Instagram</option>
-    							<option value="discord">Discord</option>
-    							<option value="website">SFU website</option>
-    							<option value="friends">Friends</option>
-    							<option value="from ">Others</option>
+    							<option value="facebook" >Facebook</option>
+    							<option value="instagram"  >Instagram</option>
+    							<option value="discord"  >Discord</option>
+    							<option value="website"  >SFU website</option>
+    							<option value="friends" >Friends</option>
+    							<option value="from "  >Others</option>
   							</select>
   							<small  id="hear_small"style="display: none;">please select one from the list</small>
 						</li>
+				</form>
 					<div class='button_div'>
-						<button type='submit_button' type="submit" value="Submit" id="btn" onclick="FormSubmission()">Register</button>
+						<button type='submit_button' type="submit" value="Submit" id="btn"  onclick="submissionVal()">Register</button>
 					</div>
-				</div>
-			</form>
 		</div>
 		<div class="footer">
 			<div class="footer-list">
