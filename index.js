@@ -20,6 +20,17 @@ function ZoomLink_show_hide() {
         document.getElementById('zoom_text2').textContent = "Button will pop up when meeeting begins";
     }
 }
+function SubForm(){
+        $.ajax({
+        url:'https://api.apispreadsheets.com/data/12546/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        error: function(){
+          window.hasOwnProperty('alert');
+          window.alert("There was an error :(")
+        }
+         });
+}
 // for Contact us html validations
 function validations(){
     let [email,name,message,valid_email] = 
@@ -160,34 +171,38 @@ function submissionVal(){
         IdValidation()
         NamesVal()
         FluentLangVal()
+        throw_error()
 }
 /* general format of the validation and validaitons for each*/
 function EmailValidation(){
-    let [ Email_box,valid_email] = [document.getElementById('Email'), /^[^ ]+@[^ ]+\.[a-z]{2,3}$/]
-    let Email = Email_box.value;
-    let [sfu_email,fic_email] = ["@sfu.ca","@learning.fraseric.ca"]
+    const [ Email_box,valid_email] = [document.getElementById('Email'), /^[^ ]+@[^ ]+\.[a-z]{2,3}$/]
+    const  Email = Email_box.value;
+    const  [sfu_email,fic_email] = ["@sfu.ca","@learning.fraseric.ca"]
     if (Email == ""){
         Email_box.classList.remove("error");
         Email_box.classList.remove("success");
         document.getElementById("email_small").textContent = "Please fill in email adress";
         show("email_small");
+        event.preventDefault();
     }
     else if (! Email.match(valid_email) | !sfu_email | !fic_email){
         document.getElementById("email_small").textContent = "Please enter valid email adress";
         ErrorHandler(Email_box,'email_small');
+        event.preventDefault();
     }
     else if (Email.match(valid_email)){
         SuccessHandler(Email_box,'email_small');
     }
 }
 function IdValidation() {
-    let Id_box = document.getElementById('ID')
-    let studentID = Id_box.value
-    let reg = /^[0-9]+$/
+    const Id_box = document.getElementById('ID')
+    const studentID = Id_box.value
+    const reg = /^[0-9]+$/
     if (studentID == ''){
         Id_box.classList.remove("error");
         Id_box.classList.remove("success");
         hide('id_small');
+        event.preventDefault();
         return
     }
     else {
@@ -197,97 +212,59 @@ function IdValidation() {
 function ValidationFormat(formvalue,value,small){
     if(formvalue== value){
         show(small);
+        event.preventDefault();
     }
     else{
         hide(small);
     }
 }
 function faculityVal(){
-    let Faculityinfo = document.getElementById('how_know').value
+    const Faculityinfo = document.getElementById('how_know').value;
     ValidationFormat(Faculityinfo,'Choose Your Faculty','facrity_small');
 }
 function yearVal(){
-    let yearinfo = document.getElementById('cars').value
+    const yearinfo = document.getElementById('cars').value;
     ValidationFormat(yearinfo,'Choose your year','year_small');
 }
 function InterestedLangVal(){
-    let interestlang = document.getElementById('interested_lang').value
+    const interestlang = document.getElementById('interested_lang').value;
     ValidationFormat(interestlang,"","interested_lang_small");
 }
 function FluentLangVal(){
-    let fluentlang = document.getElementById('fluent_lang').value
+    const fluentlang = document.getElementById('fluent_lang').value;
     ValidationFormat(fluentlang,"",'fluent_lang_small');
 }
-function InterestedLangVal(){
-    let interestlang = document.getElementById('interested_lang').value
-    ValidationFormat(interestlang,"",'interested_lang_small');
-}
 function How_hearVal(){
-    let hear = document.getElementById('how_hear').value
+    const  hear = document.getElementById('how_hear').value;
     ValidationFormat(hear,'select','hear_small');
 }
 function NamesVal() {
-    let name = document.getElementById('Name').value;
+    const name = document.getElementById('Name').value;
     ValidationFormat(name,'','name_small');
+}
+function throw_error(){
+    const [ Email_box,valid_email] = [document.getElementById('Email'), /^[^ ]+@[^ ]+\.[a-z]{2,3}$/]
+    const  Email = Email_box.value;
+    const Faculityinfo = document.getElementById('how_know').value;
+    const yearinfo = document.getElementById('cars').value;
+    const interestlang = document.getElementById('interested_lang').value;
+    const  [sfu_email,fic_email] = ["@sfu.ca","@learning.fraseric.ca"]
+    const fluentlang = document.getElementById('fluent_lang').value;
+    const  hear = document.getElementById('how_hear').value;
+    const name = document.getElementById('Name').value;
+    if( Email == "" || ! Email.match(valid_email) || !sfu_email || !fic_email ||
+        Faculityinfo == 'Choose Your Faculty' || yearinfo == 'Choose your year' || interestlang == '' || 
+        fluentlang == '' || interestlang == '' || hear == 'select' || name == '')
+        {
+     window.alert("Please fill in everything:(")
+    }
+    else {
+        SubForm();
+        window.alert("Form Data Submitted :)")
+    }
 }
 /* 2021 May  We may not use follwing code */
 
-let Questitons = [];
-const addQuestion = (ev) => {
-    ev.preventDefault() // form automatically reload page when users click button but we don not want it.
-    let Email = document.forms['form']['Email'].value;
-    let Email_box = document.forms['form']['Email'];
-    let Name = document.forms['form']['Name'].value;
-    let Name_box = document.forms['form']['Name'];
-    let Message = document.forms['form']['Message'].value;
-    let Message_box = document.forms['form']['Message'];
-    let valid_email = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if (Name == ''){
-        document.getElementById("name_small").textContent = "Name is not valid";
-        Name_box.classList.remove("error");
-        Name_box.classList.remove("success");
-        show('name_small');
-    }
-    else if (Email==''){
-        document.getElementById("email_small").textContent = "Email is empty";
-        Email_box.classList.remove("error");
-        Email_box.classList.remove("success");
-        show('email_small');
-    }
-    else if (Message==''){
-        document.getElementById("message_small").textContent = "Message is not valid";
-        Message_box.classList.remove("error");
-        Message_box.classList.remove("success");
-        show('message_small');
-    }
-    else if(! Email.match(valid_email)){
-        document.getElementById("email_small").textContent = "Email is not valid";
-        ErrorHandler(Email_box,'email_small');
-    }
-    else{
-        Name_box.classList.add("success");
-        Email_box.classList.add("success");
-        Message_box.classList.add("success");
-        Name_box.classList.remove("error");
-        Email_box.classList.remove("error");
-        Message_box.classList.remove("error");
-        hide('name_small');
-        hide('email_small');
-        hide('message_small');
-        alert("Thank you for submission")
-        let question = {
-        id: Date.now(),
-        name: Name,
-        email: Email,
-        message: Message}
-        Questitons.push(question) // push function adds question to the array (questions)
-        document.forms[0].reset(); // clear the form for next users!!
-    }
-    // store data.
-    // document.querySelector('form').reset();
-    let pre = document.querySelector('#msg pre');
-    pre.textContent = '\n' + JSON.stringify(Questitons, '\t',2);
-}  
  // document.addEventListener('DOMContentLoaded', ()=>{
    // document.getElementById('user-question').addEventListener('click',addQuestion)
 // })
