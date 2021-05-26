@@ -1,74 +1,151 @@
 <!DOCTYPE html>
 <!--
-Author: Christopher Kassner
+Authors: Christopher Kassner, Keisei Aoki
+
+
+-fix vertical dropdown menu for workshops
+
+
+DONE:
+-----
+-added sticky navbar; 
+
+-take out 'About us'-> Exec team, and 'About' -> Home page
+-add link back to home in logo
+
+TO DO:
+------
+-add other .html, .css files
+-get rid of unnecessary .css files
+-change  mistakes &  wording in .html files, About us, 
+-about us: images side by side https://www.w3schools.com/howto/howto_css_images_side_by_side.asp
+
+-separate <script> part into .js file from sticky navbar
+-dark mode: https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
 
 
   -->
 <html lang="en">
-	<head>
-		<link class="originalcss" href="style.css" rel="stylesheet" type="text/css" />
-<!-- links to the stylesheet for the home icon -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width">
-		<title>SFU Polyglots</title>
-	</head>
+<!-- head -->
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+</head>
+<!-- body -->
 <body>
 <div id="container">
-<script src="script.js"></script><!--no JS yet but script added -->
+<!-- header -->
 <header>
-<nav id="nav">
-<!-- not using 'navbar' right now-->
+<!-- nav -->
+<nav>
 <div id="navbar">
-<!-- ul/li list for navbar & dropdown menu-->
-<ul id="topul" class="ulnavbar">
-	<li><img src="SFUPolyglotsLogo.png" id="clubLogo"></li>
-	<li class="linavbar">
-		<a class="homeButton" href="index.html">HOME<i class="fa fa-home homeIcon"></i></a>
-	</li>
-	<li class="lidropdown"><a href="javascript:void(0)" class="adropdownbutton">EVENTS</a>
-		<div class="dropdowncontent">
-			<a href="precalculusindex.html">Upcoming</a>
-			<a href="calculusindex.html">Past</a>
+<script src="script.js"></script>
+	<div class="navBar">
+		<div class='left-header'>
+			<img src="pictures/SFUPolyglotsLogo2.png" id="clubLogo">
 		</div>
-	</li>
-	<li class="lidropdown"><a href="javascript:void(0)" class="adropdownbutton">WORKSHOPS</a>
-		<div class="dropdowncontent">
-			<a href="semanticsindex.html">French</a>
-			<a href="syntaxindex.html">Russian</a>
-		</div>
-	</li>
-	<li class="lidropdown"><a href="javascript:void(0)" class="adropdownbutton">ABOUT US</a>
-	</li>
-	<li class="lidropdown"><a href="javascript:void(0)" class="adropdownbutton">BLOG</a>
-		<div class="dropdowncontent">
-			<a href="semanticsindex.html">Entry1</a>
-			<a href="syntaxindex.html">Entry2</a>
-			<a href="phonologyindex.html">Entry3</a>
-			<a href="phoneticsindex.html">Entry4</a>
-		</div>
-	</li>
-	<li class="lidropdown"><a href="javascript:void(0)" class="adropdownbutton">EXEC TEAM</a>
-	</li>
-	<li class="lidropdown topnav-right">
-		<a href="javascript:void(0)" class="adropdownbutton">CONTACT</a>
-		<a href="#" class="fa fa-facebook"></a>
-		<a href="#" class="fa fa-instagram"></a>
-	</li>
-<!-- Get rid of javascript:void(0) so that the About link works -->	
-</ul>
-</div>
+		<div class="right-header">
+				<ul class='right-nav'>
+					<li><a href="index.html">HOME</a><i class="fa fa-fw fa-home homeIcon"></i></li>
+					<li><a href="execteam.html">EXEC TEAM</a></li>
+					<li class="Event" onmouseover="show('event_list')" onmouseout="hide('event_list')"><a href="events.html">EVENTS</a>
+					<li class="lidropdown"><a href="workshops.html" class="adropdownbutton">WORKSHOPS</a>
+						<div class="dropdowncontent">
+						<a href="frenchWorkshop.html">French</a>
+						<a href="mandarinWorkshop.html">Mandarin</a>
+						<a href="koreanWorkshop.html">Korean</a>
+						<a href="dutchWorkshop.html">Dutch</a>
+						<a href="japaneseWorkshop.html">Japanese</a>
+						</div>
+					</li>
+					<li><a href = "Resources.html">RESOURCES</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+				<!-- note: all .png icons are 32-pixel -->
+				<ul class="right-icons">
+					<li>
+					<a href="https://discord.com/invite/nwvewRsCpC">
+					<img src="pictures/sns_icons/discord.png" alt="Discord" class="fadeImg">
+					</a>
+					</li>
+					<li>  
+					<a href="https://www.instagram.com/sfu.polyglots/">
+					<img src="pictures/sns_icons/instagram.png" alt="Instagram"class="fadeImg">
+					</a>
+					</li>
+					<li>
+					<a href="https://www.facebook.com/SFU-Polyglots-101958235110152">
+					<img src="pictures/sns_icons/facebook.png" alt="Facebook" class="fadeImg">
+					</a>
+					</li>
+					<li>
+					<a href="https://www.linkedin.com/company/sfu-polyglots/">
+					<img src="pictures/sns_icons/linkedin3.png" alt="LinkedIn" class="fadeImg">
+					</a>
+					</li>
+				</ul>
+			<div class="mobileVersion">
+				<div class="mobileNavBar">
+				<ul class ="mobile-nav">
+					<li>
+					<a href="javascript:void(0)" class='icon' onclick='show_mobile_bar()'>
+					<i class='hamburger-menu'></i>
+					</a>
+					</li>
+				</ul>
+				</div>
+				<div class='navbar-mobile' id='navbar-mobile'>
+				<a href="javascript:void(0)" class="icon" onclick="hide_mobile_bar()"></a>
+				<ul>
+					<li><a href="index.html"><i class="fa fa-fw fa-home homeIcon"></i>HOME</a></li>
+					<li><a href="execteam.html">EXEC TEAM</a></li>
+					<li><a href="events.html">EVENTS</a></li>
+					<li class="lidropdown2"><a href="workshops.html" class="adropdownbutton2">WORKSHOPS</a>
+						<div class="dropdowncontent2">
+						<a href="frenchWorkshop.html">French</a>
+						<a href="mandarinWorkshop.html">Mandarin</a>
+						<a href="koreanWorkshop.html">Korean</a>
+						<a href="dutchWorkshop.html">Dutch</a>
+						<a href="japaneseWorkshop.html">Japanese</a>
+						</div>
+					</li>
+					
+					<li><a href="resources.html">RESOURCES</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+				</div>
+			</div>	<!-- end of mobile version -->
+			</div> <!-- end of right-header -->
+		</div> <!-- end of navBar -->
 </nav>
+</div> <!-- end of navbar -->
 </header>
+
 <main>
-<p>Welcome to my notes page!</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>Choose a subject and use the dropdown menu to find the page you're looking for!</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
+
+<h1>SFU Polyglots</h1>
+<h2>Calling all language lovers and learners</h2>
+
+
+<!--
+
+-About/Aim
+-Events list
+-Contact /  join
+
+Sign up link: 
+https://go.sfss.ca/clubs/868/info
+
+-Form for sign up / address like prelawsociety example
+
+
+
+
+-->
+
 <p>.</p>
 <p>.</p>
 <p>.</p>
@@ -89,12 +166,29 @@ Author: Christopher Kassner
 <p>.</p>
 <p>.</p>
 </main>
+
 <footer>
 <address>
-<p>Author: Christopher Kassner &copy;</p>
-<p>Date: </p>
+<p>SFU Polyglots &copy;</p>
 </address>
 </footer>
-</div>
+</div> <!-- end of container -->
+
+<!-- Function for a sticky navbar -->
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
 </body>
 </html>

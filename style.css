@@ -1,17 +1,19 @@
-/*
-To do:
+/* TO DO:
 
--Redesign css/html code for navbar section 
--Make buttons on navbar oval-shaped
--Try blue-to-white linear-gradient color for navbar
+-finish dropdown menu
+-Make page's body/content opaque when toggling hamburger menu
+-add fun facts to execteam.html
+-fix media server stuff
+-change variable names/unclear code etc
+
+-make sure vertical dropdown menu works for all other .html files (contact, execteam, ttc)
+
+
 */
 
 
 /*******************************   Container for html code   ***********************************/
-#container {
-	background: linear-gradient(to right, #5CE1E6, #ccffff);
-	opacity: 0.8;
-	/*background: linear-gradient(-70deg, black 10%, rgba(0, 0, 0, 0.5) 80%), url('aesthetic.jpg');*/
+#container{
 	color: #000080;
 	font-family: font-family: proxima-nova;
 	overflow: hidden;
@@ -19,129 +21,353 @@ To do:
 	margin: 0 auto;
 }
 
-/*Gets rid of extra whitespace*/
 html, body{
-	margin: 0 auto;
+	margin: 0 auto; /*Gets rid of extra whitespace*/
 }
+
+body{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
 
 /*******************************   Navbar   ***********************************/
-.ulnavbar {
-	list-style-type: none; /* Gets rid of bullet points */
-	background-color: #5CE1E6;
-	font-size: 16px;
-	letter-spacing: 1px;
-	padding: 14px 20px; /*Changes the size of the navigation bar*/
-	margin: 0; /*Gets rid of space at top of header */
+
+.navBar{
+  background-color: #5CE1E6;
+  color: #fff;
+  height: 90px;
+  width: 100%;
+  top: 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  
 }
 
-.linavbar {
-	float: left; /* Makes the navbar horizontal instead of vertical! */
-}
-
-.homeButton{
-	background-color: #5CE1E6;
-	border: none; /* Remove borders */
-	font-size: 16px; /* Sets font size for 'Home'*/
-	cursor: pointer; /* Mouse pointer on hover */
-	text-decoration: none;
-}
-
-/*Hover styles for the 'Home' button and icon*/
-.homeButton:hover{
-	color: hotpink;
-}
-
-.homeIcon{
-	float: left; /*Places home icon to the left of 'Home' text */
-	position: relative; /*Creates space between icon & 'Home' text */
-	right: 5px;	/*Creates space between icon & 'Home' text */
+/* Div for the club logo / left part of navbar */
+.left-header {
+	height: 100%;
+	float: left;
 }
 
 #clubLogo{
-	float: left;
-	height: 55px;
-	width: 55px;
-/*	position: 
-	display: block;	*/
+	height: 90x;
+	width: 90px;/*	position: 	display: block;	*/
+	margin: -15px 0px 0px 0px;/* margin top right bottom left */
+	 /*if height/width 100px
+	margin: -22px 80px 0px 0px; */
 }
 
-/*Displays 'Contact' on the right of the navbar*/
-.topnav-right {
+/* Div including navbar items and social media icons */
+.right-header {
+	width: 85%;
+	height: 100%; /* centers navbar items text */
 	float: right;
+	align-items: center;
 }
 
-.fa-facebook {
-	background: #3B5998;
-	color: white;
-	border-radius: 50%;
+/* Navbar items (Home, exec team, etc) */
+.right-nav{
+	float: left;
+	align-items: center;	 /* centers navbar items text */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 70%;
 }
 
-.fa-instagram {
-	background: #125688;
-	color: white;
-	border-radius: 50%;
+/* Social media icons */
+.right-icons {
+	float: right;
+	align-items: center;	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 0; /* keeps icons from disappearing*/
+	margin: 0 3%; /* keeps icons centered */
+	height: 100%;
+	width: 20%; /* spaces social media icons */
+}
+
+/* Sticky nav bar */
+.sticky{
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.sticky + .contents {
+  padding-top: 60px;
 }
 
 
-/*******************************   Dropdown menu   ***********************************/
+/* Icons */
+.homeIcon{
+	float: left; /*Places home icon to the left of 'Home' text */
+	position: relative; /*Creates space between icon & 'Home' text */
+}
+
+/*******************************   Dropdown menus   ***********************************/
+/* Horizontal dropdown menu */
 li a, .adropdownbutton {
+/*	background-color: #5CE1E6;*/
 	display: inline-block;
-	color: #000080;	/*Changes the font color of navbar items */
-	text-align: center;
-	padding: 10px 14px;
 	text-decoration: none;
-	border-style: groove;
-	border: 2px #000080;
-	border-radius: 4px;
-}
-
-li a:hover, .lidropdown:hover .adropdownbutton{
-color: hotpink;
-}
-
-li.lidropdown {
-	display: inline-block;
 }
 
 .dropdowncontent {
 	display: none;
-	position: absolute; /*When absolute with .limovetext, dropdown menu stops working */
-	/*Delete .limovetext and it works again */
+	position: absolute;
 	background-color: #5CE1E6;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0,0.2);
 	z-index: 1;
-/*	min-width: 200px; /*Adds width to dropdown menu content */
+	padding-top: 10px;
+	width: 9%;
+	text-align: center;
 }
 
 .dropdowncontent a{
-	color: navy;
-	font-size: smaller;
+	overflow: auto;
 	padding: 10px 14px;
 	text-decoration: none;
 	display: block;
-	text-align: left;
 }
 
-.dropdowncontent a:hover {
-	opacity: 0.6;
-	/*background-color: yellow;*/
+/* Vertical dropdown menu */
+li a, .adropdownbutton2{
+	display: inline-block;
+	text-decoration: none;
 }
 
+.dropdowncontent2 {
+	display: none;
+	position: absolute;
+	background-color: #5CE1E6;
+	width: 50%;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.dropdowncontent2 a{
+	overflow: auto;
+/*	padding: 10px 14px;*/
+	text-decoration: none; 
+	/* Note: removing display:block here allows for toggling */
+}
+
+/*******************************   Hovering  ***********************************/
 .lidropdown:hover .dropdowncontent {
 	display: block;
 }
 
-
-/* Centering navbar */
-/*
-#navbar{
-	clear: left;
-	display: block;
-	width: 100%;
-	position: relative;
+a:hover {
+	opacity: 0.6;
 }
-#navbar li {
-position: relative;
-left: 200px;
-}*/
+
+/* Hovering for vertical menu bar */
+.lidropdown2:hover .dropdowncontent2{
+	display: block;
+}
+
+/*******************************   Hamburger menu for mobile  ***********************************/
+.icon{
+	display: none;
+	float: right;
+	margin: 0px 25px 25px 0px; /* Creates a margin -25px from the right for the hamburger menu icon */
+	height: 45px;
+	width: 45px;
+	background-image: url('pictures/top/icons8-menu-52.png')
+}
+
+.navbar-mobile{	
+	position: fixed;
+	height: 100%;
+	width: 0;
+	right: 0;
+	background-color: #5CE1E6;
+	transition: 0.3s;
+	overflow-x: hidden; /* stops working if this part is taken out */
+	color: white;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-align: left;
+/*	margin: 50px 0px 0px 0px;*/
+	
+}
+
+.navbar-mobile li{
+	padding-top: 20px; /* spaces out items in vertical menu bar */
+	margin: 0 20px; /* margin top right bottom left */
+}
+
+
+/*******************************   media screen for mobile  ***********************************/
+@media screen and (max-width: 1051px){
+	.left-header{
+		width: 15%;
+		text-align: center;
+	}
+	.right-header{
+		width: 85%;
+	}
+	.right-nav {
+		display: none;
+	}
+	.right-icons {
+		display: none;
+	}
+	.icon {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1700px) {
+	.left-header{
+		width: 15%;
+		text-align: center;
+	}
+	.right-header {
+		width: 85%;
+	}
+	.right-nav {
+		width: 70%;
+	}
+}
+
+/*******************************  exec team  ***********************************/
+* {
+	box-sizing: border-box;
+}
+
+h1{
+	text-align: center;
+	font-size: 50px;
+	font-family: "Courier New", Courier, monospace;	
+	margin: 0; /* gets rid of space between h1 and h2 elements */
+}
+
+h2{
+	margin: 0;
+}
+
+p{
+	margin: 15px;
+}
+
+.content{
+	padding: 0 150px 0 150px; /* creates space on left and right of images on execteam.html; top right bottom left */
+}
+
+#admin_table {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+	/* Change font-size / family ? */
+	font-size: 1.2rem;
+}
+
+.admin_pic {
+	width: 100%;
+	display: center;
+}
+
+.column{
+	float: left;
+	width: 50%;
+	padding: 5px;
+	height: 100%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 750px) {
+	.column{
+		width: 100% !important;
+	}
+}
+
+/* footer */
+footer{
+	text-align: center;
+/*	position: fixed;
+	bottom: 0;*/
+}
+
+/*******************************  contact  ***********************************/
+.contactIcons{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+/*	height: 100%;
+	width: 20%; */
+}
+
+/*******************************  events  ***********************************/
+.eventColumn {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.eventRow::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  .eventColumn {
+    width: 100%;
+  }
+}
+
+/*******************************  workshops ***********************************/
+.workshopColumn {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.workshopRow::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  .workshopColumn {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
 

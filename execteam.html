@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--
+Authors: Christopher Kassner, Keisei Aoki
+
+TO DO:
+------
+
+-create space/margins between paragraph text
+-left align Fluent/Learning etc?
+-
+
+
+  -->
+<html lang="en">
+<!-- head -->
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exec Team</title>
+</head>
+<!-- body -->
+<body>
+<div id="container">
+<!-- header -->
+<header>
+<!-- nav -->
+<nav>
+<div id="navbar">
+<script src="script.js"></script>
+	<div class="navBar">
+		<div class='left-header'>
+			<img src="pictures/SFUPolyglotsLogo.png" id="clubLogo">
+		</div>
+		<div class="right-header">
+				<ul class='right-nav'>
+					<li><a href="index.html">HOME</a><i class="fa fa-fw fa-home homeIcon"></i></li>
+					<li><a href="execteam.html">EXEC TEAM</a></li>
+					<li class="Event" onmouseover="show('event_list')" onmouseout="hide('event_list')"><a href="events.html">EVENTS</a>
+		<!--		<li><a href="workshops.html">WORKSHOPS</a></li> -->
+					<li class="lidropdown"><a href="javascript:void(0)" class="adropdownbutton">WORKSHOPS</a>
+						<div class="dropdowncontent">
+						<a href="frenchWorkshop.html">French</a>
+						<a href="mandarinWorkshop.html">Mandarin</a>
+						<a href="koreanWorkshop.html">Korean</a>
+						<a href="dutchWorkshop.html">Dutch</a>
+						<a href="japaneseWorkshop.html">Japanese</a>
+						</div>
+					</li>
+					<li><a href = "Resources.html">RESOURCES</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+				<!-- note: all .png icons are 32-pixel -->
+				<ul class="right-icons">
+					<li>
+					<a href="https://discord.com/invite/nwvewRsCpC">
+					<img src="pictures/sns_icons/discord.png" alt="Discord" class="fadeImg">
+					</a>
+					</li>
+					<li>  
+					<a href="https://www.instagram.com/sfu.polyglot/">
+					<img src="pictures/sns_icons/instagram.png" alt="Instagram"class="fadeImg">
+					</a>
+					</li>
+					<li>
+					<a href="https://www.facebook.com/SFU-Polyglots-101958235110152">
+					<img src="pictures/sns_icons/facebook.png" alt="Facebook" class="fadeImg">
+					</a>
+					</li>
+					<li>
+					<a href="https://www.linkedin.com/company/sfu-polyglots/">
+					<img src="pictures/sns_icons/linkedin3.png" alt="LinkedIn" class="fadeImg">
+					</a>
+					</li>
+				</ul>
+			<div class="mobileVersion">
+				<div class="mobileNavBar">
+				<ul class ="mobile-nav">
+					<li>
+					<a href="javascript:void(0)" class='icon' onclick='show_mobile_bar()'>
+					<i class='hamburger-menu'></i>
+					</a>
+					</li>
+				</ul>
+				</div>
+				<div class='navbar-mobile' id='navbar-mobile'>
+				<a href="javascript:void(0)" class="icon" onclick="hide_mobile_bar()"></a>
+				<ul>
+					<li><a href="index.html"><i class="fa fa-fw fa-home homeIcon"></i>HOME</a></li>
+					<li><a href="execteam.html">EXEC TEAM</a></li>
+					<li><a href="events.html">EVENTS</a></li>
+					<li><a href="workshops.html">WORKSHOPS</a></li>
+					<li><a href="resources.html">RESOURCES</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+				</div>
+			</div>	<!-- end of mobile version -->
+			</div> <!-- end of right-header -->
+		</div> <!-- end of navBar -->
+</nav>
+</div> <!-- end of navbar -->
+</header>
+
+<main>
+
+<!-- 
+center <p> and make sure it appears first on the page 
+-->
+<h1>Exec Team</h1>
+
+<section class="content">
+<div class="row">
+	<div id ="admin_table" class="column">
+		<img src ="pictures/admin/kassner3.png" alt="Chris Kassner" title="head_logo" class="admin_pic">
+			<h2>Chris Kassner</h2>
+			<h2>President</h2>
+			<p><strong>Fluent: </strong>English, French, Japanese, Portuguese<br>
+				<strong>Learning: </strong>Everything else<br>
+				<strong>Why do you like learning languages? </strong><br> Growing up around different cultures I've always been interested in languages. Learning languages is fun and rewarding - it can open many doors professionally and lead to new friendships. I love traveling and adventures, so it's always fun speaking different languages with locals in different countries<br>
+				<strong>Fun Fact: </strong>I lived in Tokyo for 5 years!
+			</p>
+	</div>
+	<div id="admin_table" class="column">
+		<img src="pictures/admin/lam.png" alt="Christina Lam" title="head_logo" class="admin_pic">
+			<h2>Christina Lam</h2>
+			<h2>VP Internal</h2>
+			<p><strong>Fluent: </strong>Cantonese, English, French, Spanish<br>
+				<strong>Learning: </strong>Mandarin, Esperanto<br>					
+				<strong>Why do you like learning languages? </strong><br>I have been fascinated by languages for the longest time-- in Grade 1, I wanted to learn all the languages in the world! I think that it’s so valuable to be able to share words and cultures with others. This quote, usually attributed to Nelson Mandela, sums it up so well:  “If you talk to a [person] in a language [they] understand, that goes to [their] head. If you talk to [them] in [their] own language, that goes to [their] heart.”<br>
+				<strong>Fun Fact: </strong>I’ve never tried coffee before!
+			</p>
+	</div>
+</div>	
+<div class="row">
+	<div id="admin_table" class="column">
+		<img src="pictures/admin/chan3.png" alt="Athena Chan" title ="head_logo" class="admin_pic">
+			<h2>Athena Chan</h2>
+			<h2>External VP/Artist</h2>
+			<p><strong>Fluent: </strong>Cantonese, English, Mandarin<br>
+				<strong>Learning: </strong>Japanese, Korean<br>	
+				<strong>Why do you like learning languages? </strong><br>I love speaking in general so it will be nice if I can 
+						talk to more people by knowing their language! Also, it’s super cool when I can spot similarities between Chinese (Canto/Mando), 
+						Japanese and Korean. Another thing is that making multilingual puns are super fun heh :3<br>
+				<strong>Fun Fact: </strong>?				
+			</p>		
+	</div>	
+	<div id="admin_table" class="column">
+		<img src="pictures/admin/or.jpg" alt="Anthony Or" class="admin_pic">
+			<h2>Anthony Or</h2>
+			<h2>VP Finance</h2>
+			<p><strong>Fluent: </strong>English, Cantonese<br>
+				<strong>Learning: </strong>French, Japanese, Korean, Mandarin, Spanish<br>		
+				<strong>Why do you like learning languages?</strong><br> Languages bring people together, and the learning of different cultures shows
+						 respect to others from a different background. Languages are fun to learn, and can help you in your social, 
+						 professional, and personal lives. Also, I got tired of people asking <em>"Are you not Chinese?"</em> when I told them I couldn’t speak Mandarin. <br>
+				<strong>Fun Fact: </strong>?
+			</p>
+	</div>
+</div>
+<div class="row">
+	<div id="admin_table" class="column">
+		<img src="pictures/admin/aoki2.jpg" alt="Keisei Aoki" class="admin_pic">
+			<br>
+			<h2>Keisei Aoki</h2>
+			<h2>VP Tech</h2>
+			<p><strong>Fluent: </strong>English, Japanese<br>
+				<strong>Learning: </strong>Russian, French, and other languages<br>
+					
+				<strong>Why do you like learning languages?</strong><br>I rarely interacted with foreign languages and cultures
+						 until I was in my mid-teens. After I moved to Canada, I realized that human languages are so diverse and that knowing 
+						 them is one of the keys to opening others' minds. It's not easy to acquire foreign languages, but the payoff is tremendous.<br>
+				<strong>Fun Fact: </strong>?
+			</p>
+	</div>	
+	<div id="admin_table" class="column">
+			<img src="pictures/admin/cheng.jpg" alt="Jasmine Cheng" class="admin_pic">
+			<h2>Jasmine Cheng</h2>
+			<h2>Membership Chair</h2>
+			<p><strong>Fluent: </strong>Cantonese, English, Mandarin<br>
+				<strong>Learning: </strong>ASL, French, German, Korean<br>					
+				<strong>Why do you like learning languages?</strong><br>I love traveling so it would be great if I can communicate 
+						with the locals in their language. Also, looking at the subtitles while watching a movie/tv series is kind of distracting. 
+						I hope I can understand what they are talking about without the help of subtitles! <br>
+				<strong>Fun Fact: </strong>?
+			</p>
+	</div>
+</div>
+<div class="row">
+	<div id="admin_table" class="column">
+		<img src="pictures/admin/velasco.jpg" alt="Zach Velasco" class="admin_pic">
+			<h2>Zach Velasco</h2>
+			<h2>Workshop Coordinator</h2>
+			<p><strong>Fluent: </strong>Cebuano, English<br>
+				<strong>Learning: </strong>Dutch, German, Korean, Tagalog<br>
+				<strong>Why do you like learning languages?</strong><br> I like languages, as each one conveys emotions and speech in different ways. English is just a horrible language for conveying certain things in life, so knowing/learning other languages has helped me with that. <br>
+				<strong>Fun Fact: </strong>?
+	</div>
+	<div id="admin_table" class="column">
+		<img src="pictures/admin/upadhyay2.jpg" alt="Jitakshi Upadhyay" class="admin_pic">
+			<h2>Jitakshi Upadhyay</h2>
+			<h2>Social Media Coordinator</h2>
+			<p><strong>Fluent: </strong>English, Hindi<br>
+				<strong>Learning: </strong>French<br>
+				<strong>Why do you like learning languages?</strong><br> I love learning languages because it helps me learn about different cultures. It is also the sheer beauty of being able to communicate the same ideas in so many different ways using so many different languages which further pushes me to learn new languages. Learning languages also brings about so many new opportunities and opens new doors to exploring cultures and communicating with new people.<br>
+				<strong>Fun Fact: </strong>?
+			</p>
+	</div>	
+</div>	
+<div class="row">
+	<div id="admin_table" class="column">
+		<img src="pictures/admin/condilenios2.jpg" alt="Brianna Condilenios" class="admin_pic">
+			<h2>Brianna Condilenios</h2>
+			<h2>Outreach Engagement Coordinator</h2>
+			<p><strong>Fluent: </strong>English<br>
+				<strong>Learning: </strong>Greek, French, Russian, Korean, and Vietnamese, but I plan on learning ALL languages<br>
+				<strong>Why do you like learning languages?</strong><br> The world is precious. It is bursting with beautiful cultures, countries, people, and ways of life. Learning languages helps me begin to unlock some of that rich magnitude - even if it is from my bedroom. Speaking someone’s language can instantly communicate a level of cultural respect. Learning languages leads to people forming more meaningful connections with one another. Learning languages helps widen my world perspective and strengthen my mental capacities. I hope to maintain a lifestyle that is conscious of the wonderful diversity our world <br>
+				<strong>Fun Fact: </strong>?
+			</p>
+	</div>
+	<div id="admin_table" class="column">
+		<img src="pictures/admin/nicolas.jpg" alt="Richard Nicolas" class="admin_pic">
+			<h2>Richard Nicolas</h2>
+			<h2>VP Assistant</h2>
+			<p><strong>Fluent: </strong> English, Tagalog<br>
+				<strong>Learning: </strong>French, Korean<br>
+				<strong>Why do you like learning languages?</strong><br>I find that language is like art. Each language has its own unique structure that connects people. I find that knowing more languages even if you’re not perfect immerses you in its culture. I was not fluent at Tagalog at first and couldn’t experience the full Filipino culture until I was able to go to school for it. After learning the language, I was able to experience the fullest extent of my culture. I discovered that knowing more languages would give me that benefit of discovering its culture. <br>
+				<strong>Fun Fact: </strong>?
+			</p>
+	</div>
+</div>
+</section>
+</main>
+
+<footer>
+<address>
+<p>SFU Polyglots &copy;</p>
+</address>
+</footer>
+</div> <!-- end of container -->
+
+<!-- Function for a sticky navbar -->
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
