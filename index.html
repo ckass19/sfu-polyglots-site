@@ -1,35 +1,19 @@
 <!DOCTYPE html>
 <!--
 Authors: Christopher Kassner, Keisei Aoki
-
-
--fix vertical dropdown menu for workshops
-
-
-DONE:
------
--added sticky navbar; 
-
--take out 'About us'-> Exec team, and 'About' -> Home page
--add link back to home in logo
-
-TO DO:
-------
--add other .html, .css files
--get rid of unnecessary .css files
--change  mistakes &  wording in .html files, About us, 
--about us: images side by side https://www.w3schools.com/howto/howto_css_images_side_by_side.asp
-
--separate <script> part into .js file from sticky navbar
--dark mode: https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
-
-
   -->
 <html lang="en">
 <!-- head -->
 <head>
 	<link href="style.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat" />
+
+<!-- 
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Playfair+Display" />
+'https://fonts.googleapis.com/css?family=Montserrat' 
+-->
 	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home</title>
@@ -45,11 +29,24 @@ TO DO:
 <script src="script.js"></script>
 	<div class="navBar">
 		<div class='left-header'>
+		<ul>
+			<li><a href="index.html">
 			<img src="pictures/SFUPolyglotsLogo2.png" id="clubLogo">
+			</a></li>
+		</ul>
 		</div>
+		
+		<div class="textNextToImage">
+		<ul>
+			<li class='textNextToLogo'>SFU POLYGLOTS</li>
+		</ul>
+		</div>
+		
 		<div class="right-header">
-				<ul class='right-nav'>
-					<li><a href="index.html">HOME</a><i class="fa fa-fw fa-home homeIcon"></i></li>
+		<ul class="right-nav">
+					<li><a href="index.html">HOME</a>
+<!--					<i class="fa fa-fw fa-home homeIcon"></i> -->
+					</li>
 					<li><a href="execteam.html">EXEC TEAM</a></li>
 					<li class="Event" onmouseover="show('event_list')" onmouseout="hide('event_list')"><a href="events.html">EVENTS</a>
 					<li class="lidropdown"><a href="workshops.html" class="adropdownbutton">WORKSHOPS</a>
@@ -62,45 +59,33 @@ TO DO:
 						</div>
 					</li>
 					<li><a href = "Resources.html">RESOURCES</a></li>
-					<li><a href="contact.html">CONTACT</a></li>
+					<li><a href="contact.html">CONTACT</a></li>			
 				</ul>
-				<!-- note: all .png icons are 32-pixel -->
-				<ul class="right-icons">
-					<li>
-					<a href="https://discord.com/invite/nwvewRsCpC">
-					<img src="pictures/sns_icons/discord.png" alt="Discord" class="fadeImg">
-					</a>
-					</li>
-					<li>  
-					<a href="https://www.instagram.com/sfu.polyglots/">
-					<img src="pictures/sns_icons/instagram.png" alt="Instagram"class="fadeImg">
-					</a>
-					</li>
-					<li>
-					<a href="https://www.facebook.com/SFU-Polyglots-101958235110152">
-					<img src="pictures/sns_icons/facebook.png" alt="Facebook" class="fadeImg">
-					</a>
-					</li>
-					<li>
-					<a href="https://www.linkedin.com/company/sfu-polyglots/">
-					<img src="pictures/sns_icons/linkedin3.png" alt="LinkedIn" class="fadeImg">
-					</a>
-					</li>
-				</ul>
+
 			<div class="mobileVersion">
 				<div class="mobileNavBar">
 				<ul class ="mobile-nav">
 					<li>
 					<a href="javascript:void(0)" class='icon' onclick='show_mobile_bar()'>
-					<i class='hamburger-menu'></i>
+					<i class='fa fa-bars'></i>
 					</a>
 					</li>
 				</ul>
 				</div>
+				
+				
 				<div class='navbar-mobile' id='navbar-mobile'>
-				<a href="javascript:void(0)" class="icon" onclick="hide_mobile_bar()"></a>
+				<a href="javascript:void(0)" class="icon" onclick="hide_mobile_bar()">
+				<i class="fa fa-bars"></i>
+				</a>
 				<ul>
-					<li><a href="index.html"><i class="fa fa-fw fa-home homeIcon"></i>HOME</a></li>
+					<li>
+					<div class='home'>
+					<a href="index.html">
+					<!-- <i class="fa fa-fw fa-home homeIcon"></i> -->
+					HOME</a>
+					</div>
+					</li>
 					<li><a href="execteam.html">EXEC TEAM</a></li>
 					<li><a href="events.html">EVENTS</a></li>
 					<li class="lidropdown2"><a href="workshops.html" class="adropdownbutton2">WORKSHOPS</a>
@@ -116,55 +101,112 @@ TO DO:
 					<li><a href="resources.html">RESOURCES</a></li>
 					<li><a href="contact.html">CONTACT</a></li>
 				</ul>
-				</div>
+				</div> <!-- end of navbar-mobile -->
 			</div>	<!-- end of mobile version -->
 			</div> <!-- end of right-header -->
 		</div> <!-- end of navBar -->
 </nav>
 </div> <!-- end of navbar -->
 </header>
-
 <main>
 
-<h1>SFU Polyglots</h1>
-<h2>Calling all language lovers and learners</h2>
+<!-- hack to create space -->
+<br><br><br><br><br><br>
+<!-- OR: 'SFU's language club' -->
+<h1>SFU's Language Club</h1>
+<!--<h1>Calling all language learners and lovers!</h1>-->
 
+<br>
+<div class="imgContainer">
+<img src="pictures/genMeetingScreenshot.jpg" />
+</div>
+
+<!-- hack for creating space between h1 and following containers -->
+<br><br>
+<div class="mainContainer">
+<h2>Who are we?</h2>
+<p>Established in 2021, SFU Polyglots &copy is SFU's first and newest language club for students.  We are a club for anyone interested in languages and language learning, including non-SFU students.  We hold weekly meetings where we play language-related activities and practice languages, as well as workshops, movie nights, and other events!
+</p>
+</div>
 
 <!--
+<img src="pictures/SFUPolyglotsLogo2.png" class="backgroundImage">
+
+use js Alert to tell users 'email sent
+
 
 -About/Aim
 -Events list
 -Contact /  join
-
-Sign up link: 
-https://go.sfss.ca/clubs/868/info
-
--Form for sign up / address like prelawsociety example
-
-
-
-
 -->
 
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
+<div class="joinContainer">
+<h2>Interested in joining? Click below.</h2>
+<a href="https://go.sfss.ca/clubs/868/info">
+	<img src="pictures/sns_icons/sfss.png" alt="Discord" class="sfssLogo">
+</a>
+</div>
+
+<div class="contactContainer">
+<h2>Questions? Feel free to contact us.</h2>
+<form method="POST" name="contactform" action="contact-form-handler.php"> 
+<p>
+<label for='name'>Name:</label> <br>
+<input type="text" name="name" placeholder="Full name">
+</p>
+<p>
+<label for='email'>E-mail:</label> <br>
+<input type="text" name="email" placeholder="E-mail address"> <br>
+</p>
+<p>
+<label for='subject'>Subject:</label> <br>
+<input type="text" name="subject" placeholder="Subject"> <br>
+</p>
+<p>
+<label for='message'>Message:</label> <br>
+<textarea name="message" placeholder="Write here..."></textarea>
+</p>
+<input type="submit" value="Submit"><br>
+</form>
+<div> <!-- end of contactContainer -->
+
+
+
+<!--
+
+<div class="contactContainer">
+<form action="mailto:sfu.polyglot@gmail.com">
+  Name: <br><input type="text" name="fullName" placeholder="Full name" value=""><br>
+  E-mail address: <br><input type="text" name="emailAddress" placeholder="E-mail" value=""><br>
+  Subject: <br><input type="text" name="subjectOFEmail" placeholder="Subject" value=""><br>
+  Message: <br><input type="text" name="textOfMessage" placeholder="Write something..." value=""><br>
+  <input type="submit" value="Submit">
+</form> 
+</div>
+
+
+
+<p>POST TEST</p>
+<form method="POST" name="contactForm" action="form-to-email.php">
+ Name: <br><input type="text" name="fullName" placeholder="Full name" value=""><br>
+ E-mail address: <br><input type="text" name="emailAddress" placeholder="E-mail" value=""><br>
+ Subject: <br><input type="text" name="subjectOFEmail" placeholder="Subject" value=""><br>
+ Message: <br><input type="text" name="textOfMessage" placeholder="Write something..." value=""><br>
+ </form>
+-->
+
+<!--	<p>
+		<label for="name">Enter Name: </label><br>
+		<input type="text" name="name">
+	</p>
+	<p>
+		<label for="email">Enter E-mail Address:</label><br>
+		<input type="text" name="email">
+	</p>
+-->
+
+
+<!-- include social media icons at bottom -->
 </main>
 
 <footer>
@@ -173,22 +215,6 @@ https://go.sfss.ca/clubs/868/info
 </address>
 </footer>
 </div> <!-- end of container -->
-
-<!-- Function for a sticky navbar -->
-<script>
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
 
 </body>
 </html>

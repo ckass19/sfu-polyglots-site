@@ -1,12 +1,35 @@
 /* TO DO:
 
--finish dropdown menu
--Make page's body/content opaque when toggling hamburger menu
--add fun facts to execteam.html
--fix media server stuff
+-fix mediascreen/navbar bugs; need to set absolute/fixed positions
+-French workshop time, + add Japanese workshop image
+-add correct Zoom links for workshops
+-make sure contact form is working
+-fix footer position
+
+
+
+EXTRA TO DO:
+-try HORIZONTAL VIEW for polyglots execs
+-make navbar opaque when scrolling down
+-make page slightly opaque when sideNavbar is open
+
+
+-box radius/size etc for the contact for
+
+-change the font family / font colour
+-margin a little lighter
+-add box shadow?
+-change px to em / fix all the -30px etc hacks
 -change variable names/unclear code etc
 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+EXTRA:
+-finish dropdown menu
+-Make page's body/content opaque when toggling hamburger menu
 -make sure vertical dropdown menu works for all other .html files (contact, execteam, ttc)
+
 
 
 */
@@ -15,7 +38,9 @@
 /*******************************   Container for html code   ***********************************/
 #container{
 	color: #000080;
-	font-family: font-family: proxima-nova;
+	font-family: 'Montserrat';
+/*	font-family: proxima-nova;
+font-family: 'Playfair Display';*/
 	overflow: hidden;
 	padding: 0;
 	margin: 0 auto;
@@ -26,8 +51,9 @@ html, body{
 }
 
 body{
-	font-family: Georgia, 'Times New Roman', Times, serif;
-
+	font-family: 'Montserrat';
+/*	font-family: Georgia, 'Times New Roman', Times, serif;*/
+	/*background-image: url('pictures/SFUPolyglotsLogo2.png');*/
 }
 
 li{
@@ -39,66 +65,98 @@ a{
 	color: inherit;
 }
 
+* {
+	box-sizing: border-box;
+}
+
+h1{
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Montserrat';
+/*	font-family: "Courier New", Courier, monospace;	*/
+	margin: 0; /* gets rid of space between h1 and h2 elements */
+}
+
+h2{
+	margin: 15px;
+}
+
+p{
+	margin: 15px;
+}
+
+/*
+.backgroundImage{
+	background-position: center top;
+	opacity: 0.1;
+}*/
+
 
 /*******************************   Navbar   ***********************************/
 
 .navBar{
   background-color: #5CE1E6;
+  position: fixed; /* Gets rid of navbar bug */
   color: #fff;
   height: 90px;
   width: 100%;
   top: 0;
-  font-size: 16px;
   letter-spacing: 1px;
-  
+  display: inline-flex;
 }
 
 /* Div for the club logo / left part of navbar */
 .left-header {
-	height: 100%;
+/*	height: 100%;*/
 	float: left;
+	margin-left: 50px;
 }
 
 #clubLogo{
+	display: block;/* added display block */
 	height: 90x;
-	width: 90px;/*	position: 	display: block;	*/
-	margin: -15px 0px 0px 0px;/* margin top right bottom left */
-	 /*if height/width 100px
-	margin: -22px 80px 0px 0px; */
+	width: 90px;/*	position: 	*/
+	/*Changed from -40 to 0px*/
+	margin: -30px 0px 0px -20px;/* margin top right bottom left */
+	
 }
+
+.textNextToLogo{
+	font-size: 24px;
+}
+
+.textNextToImage{
+	position: fixed;
+	width: 200px;
+	margin-left: 130px;
+}
+
 
 /* Div including navbar items and social media icons */
 .right-header {
-	width: 85%;
-	height: 100%; /* centers navbar items text */
-	float: right;
-	align-items: center;
+	font-size: 14px;
+	/* Changed from 150px*/
+	margin-left: -50px;
+/*	position: fixed - solves the moving text problem */
 }
 
 /* Navbar items (Home, exec team, etc) */
 .right-nav{
-	float: left;
+/*	position: static;*/
+	float: right;
 	align-items: center;	 /* centers navbar items text */
-	display: flex;
+	display: flex; /* Removing this gives the items as a column */
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: flex-end; /*Gets rid of 'Contact disappearing*/
 	padding: 0;
 	margin: 0;
 	height: 100%;
-	width: 70%;
 }
 
-/* Social media icons */
-.right-icons {
-	float: right;
-	align-items: center;	
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	padding: 0; /* keeps icons from disappearing*/
-	margin: 0 3%; /* keeps icons centered */
-	height: 100%;
-	width: 20%; /* spaces social media icons */
+.right-nav a{
+	/* IMPORTANT; SETS A MINIMUM MARGIN FOR THE SPACE IN BETWEEN WORDS */
+	margin: 15px;
+	/*padding-right: 50px;*/
 }
 
 /* Sticky nav bar */
@@ -110,13 +168,6 @@ a{
 
 .sticky + .contents {
   padding-top: 60px;
-}
-
-
-/* Icons */
-.homeIcon{
-	float: left; /*Places home icon to the left of 'Home' text */
-	position: relative; /*Creates space between icon & 'Home' text */
 }
 
 /*******************************   Dropdown menus   ***********************************/
@@ -133,7 +184,7 @@ li a, .adropdownbutton {
 	background-color: #5CE1E6;
 	z-index: 1;
 	padding-top: 10px;
-	width: 9%;
+	width: 12%; /* Changed from 9% */
 	text-align: center;
 }
 
@@ -184,10 +235,9 @@ a:hover {
 .icon{
 	display: none;
 	float: right;
-	margin: 0px 25px 25px 0px; /* Creates a margin -25px from the right for the hamburger menu icon */
-	height: 45px;
-	width: 45px;
-	background-image: url('pictures/top/icons8-menu-52.png')
+	font-size: 36px;
+	/*Changed from 0 25 25 0*/
+	margin: 10px 10px 25px 0px; /* Creates a margin -10px from the right for the hamburger menu icon */
 }
 
 .navbar-mobile{	
@@ -199,7 +249,7 @@ a:hover {
 	transition: 0.3s;
 	overflow-x: hidden; /* stops working if this part is taken out */
 	color: white;
-	font-size: 16px;
+	font-size: 14px;
 	letter-spacing: 1px;
 	text-align: left;
 /*	margin: 50px 0px 0px 0px;*/
@@ -209,64 +259,120 @@ a:hover {
 .navbar-mobile li{
 	padding-top: 20px; /* spaces out items in vertical menu bar */
 	margin: 0 20px; /* margin top right bottom left */
+	
 }
+
+/*
+.right-nav a{
+	word-spacing: 50px;
+}*/
+
 
 
 /*******************************   media screen for mobile  ***********************************/
+
+/*
+@media screen and (max-width: 700px){
+}*/
+
 @media screen and (max-width: 1051px){
 	.left-header{
-		width: 15%;
 		text-align: center;
+		/* margin-left is current fix for making icon/text more centered */
+		margin-left: 0px;
+	}
+	.textNextToImage{
+		margin-left: 70px;
 	}
 	.right-header{
-		width: 85%;
+		width: 95%;
+		
 	}
 	.right-nav {
-		display: none;
-	}
-	.right-icons {
 		display: none;
 	}
 	.icon {
 		display: block;
 	}
+	/* WORKS; create another transition for 1051 - 1300-ish */
+	img{
+		width: 67%; /*Changed from 100% */
+	}
+/*
+	IF icon display is block, then use opacity
+		.left-header{
+			opacity: 0.5;
+		}
+		.r{
+			opacity: 0.5;
+		}
+		body{
+			opacity: 0.5;
+		}
+*/		
 }
 
-@media screen and (min-width: 1051px) and (max-width: 1700px) {
+/* Need media screen for ~1300px ish */
+
+
+@media screen and (min-width: 1051px) and (max-width: 2100px) {
 	.left-header{
-		width: 15%;
 		text-align: center;
 	}
 	.right-header {
-		width: 85%;
+		width: 87%;
 	}
 	.right-nav {
-		width: 70%;
+		/* Changed from 70% to 65*/
+		width: 55%; /* Changes the spacing between right-nav items */
 	}
 }
 
-/*******************************  exec team  ***********************************/
-* {
-	box-sizing: border-box;
+/*******************************  home page  ***********************************/
+
+.contactContainer{
+	/* Centers contact container */
+text-align: center;	
+	
 }
 
-h1{
+input[type=submit]{
+	background-color: #5CE1E6;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	letter-spacing: 1px;
+}
+
+.container{
+	border-radius: 8px;
+	padding: 20px;
+}
+
+.mainContainer{
 	text-align: center;
-	font-size: 50px;
-	font-family: "Courier New", Courier, monospace;	
-	margin: 0; /* gets rid of space between h1 and h2 elements */
 }
 
-h2{
-	margin: 0;
+.joinContainer{
+	text-align: center;		/* Centers contact container */
 }
 
-p{
-	margin: 15px;
+.sfssLogo{
+	height: 100px;
+	width: 100px;
 }
+
+.imgContainer{
+	text-align: center;
+}
+
+
+/*******************************  exec team  ***********************************/
 
 .content{
-	padding: 0 150px 0 150px; /* creates space on left and right of images on execteam.html; top right bottom left */
+	padding: 25px 250px 0 250px; /* creates space on left and right of images on execteam.html; top right bottom left */
 }
 
 #admin_table {
@@ -279,10 +385,16 @@ p{
 	margin: 0 auto;
 	/* Change font-size / family ? */
 	font-size: 1.2rem;
+	/* Change:
+	flex-direction: row;
+	width: 100%;
+	for vertical exec team
+	*/
 }
 
+
 .admin_pic {
-	width: 100%;
+	width: 90%;
 	display: center;
 }
 
@@ -301,7 +413,10 @@ p{
 }
 
 /* Responsive layout */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1051px) {
+/*	.row h2, p{
+		float: right !important;
+	}*/
 	.column{
 		width: 100% !important;
 	}
@@ -313,6 +428,16 @@ footer{
 /*	position: fixed;
 	bottom: 0;*/
 }
+
+
+
+
+
+
+
+
+
+
 
 /*******************************  contact  ***********************************/
 .contactIcons{
@@ -364,6 +489,54 @@ footer{
     width: 100%;
   }
 }
+
+
+
+
+/*
+.execContainer{
+	position: relative;
+	content: "";
+	clear: both;
+	display: flex;
+	flex-direction: row;
+	
+}
+
+.image{
+}
+
+.text{
+	float: right;
+}
+
+.execContainer img{
+	align-items: center;
+	justify-content: center;	
+}
+*/
+
+/*
+.execContainer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.image{
+	vertical-align: middle;
+}
+
+
+*/
+
+
+
+
+
+
+
 
 
 

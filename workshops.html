@@ -2,35 +2,22 @@
 <!--
 Authors: Christopher Kassner, Keisei Aoki
 
-
-
-DONE:
------
--added sticky navbar; 
-
--take out 'About us'-> Exec team, and 'About' -> Home page
--add link back to home in logo
-
-TO DO:
-------
--add other .html, .css files
--get rid of unnecessary .css files
--change  mistakes &  wording in .html files, About us, 
--about us: images side by side https://www.w3schools.com/howto/howto_css_images_side_by_side.asp
-
--separate <script> part into .js file from sticky navbar
--dark mode: https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
-
-
   -->
 <html lang="en">
 <!-- head -->
 <head>
 	<link href="style.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat" />
+
+<!-- 
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Playfair+Display" />
+'https://fonts.googleapis.com/css?family=Montserrat' 
+-->
 	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Workshops</title>
+	<title>Home</title>
 </head>
 <!-- body -->
 <body>
@@ -43,15 +30,27 @@ TO DO:
 <script src="script.js"></script>
 	<div class="navBar">
 		<div class='left-header'>
-			<img src="pictures/SFUPolyglotsLogo.png" id="clubLogo">
+		<ul>
+			<li><a href="index.html">
+			<img src="pictures/SFUPolyglotsLogo2.png" id="clubLogo">
+			</a></li>
+		</ul>
 		</div>
+		
+		<div class="textNextToImage">
+		<ul>
+			<li class='textNextToLogo'>SFU POLYGLOTS</li>
+		</ul>
+		</div>
+		
 		<div class="right-header">
-				<ul class='right-nav'>
-					<li><a href="index.html">HOME</a><i class="fa fa-fw fa-home homeIcon"></i></li>
+		<ul class="right-nav">
+					<li><a href="index.html">HOME</a>
+<!--					<i class="fa fa-fw fa-home homeIcon"></i> -->
+					</li>
 					<li><a href="execteam.html">EXEC TEAM</a></li>
 					<li class="Event" onmouseover="show('event_list')" onmouseout="hide('event_list')"><a href="events.html">EVENTS</a>
-		<!--		<li><a href="workshops.html">WORKSHOPS</a></li> -->
-					<li class="lidropdown"><a href="javascript:void(0)" class="adropdownbutton">WORKSHOPS</a>
+					<li class="lidropdown"><a href="workshops.html" class="adropdownbutton">WORKSHOPS</a>
 						<div class="dropdowncontent">
 						<a href="frenchWorkshop.html">French</a>
 						<a href="mandarinWorkshop.html">Mandarin</a>
@@ -61,60 +60,65 @@ TO DO:
 						</div>
 					</li>
 					<li><a href = "Resources.html">RESOURCES</a></li>
-					<li><a href="contact.html">CONTACT</a></li>
+					<li><a href="contact.html">CONTACT</a></li>			
 				</ul>
-				<!-- note: all .png icons are 32-pixel -->
-				<ul class="right-icons">
-					<li>
-					<a href="https://discord.com/invite/nwvewRsCpC">
-					<img src="pictures/sns_icons/discord.png" alt="Discord" class="fadeImg">
-					</a>
-					</li>
-					<li>  
-					<a href="https://www.instagram.com/sfu.polyglot/">
-					<img src="pictures/sns_icons/instagram.png" alt="Instagram"class="fadeImg">
-					</a>
-					</li>
-					<li>
-					<a href="https://www.facebook.com/SFU-Polyglots-101958235110152">
-					<img src="pictures/sns_icons/facebook.png" alt="Facebook" class="fadeImg">
-					</a>
-					</li>
-					<li>
-					<a href="https://www.linkedin.com/company/sfu-polyglots/">
-					<img src="pictures/sns_icons/linkedin3.png" alt="LinkedIn" class="fadeImg">
-					</a>
-					</li>
-				</ul>
+
 			<div class="mobileVersion">
 				<div class="mobileNavBar">
 				<ul class ="mobile-nav">
 					<li>
 					<a href="javascript:void(0)" class='icon' onclick='show_mobile_bar()'>
-					<i class='hamburger-menu'></i>
+					<i class='fa fa-bars'></i>
 					</a>
 					</li>
 				</ul>
 				</div>
+				
+				
 				<div class='navbar-mobile' id='navbar-mobile'>
-				<a href="javascript:void(0)" class="icon" onclick="hide_mobile_bar()"></a>
+				<a href="javascript:void(0)" class="icon" onclick="hide_mobile_bar()">
+				<i class="fa fa-bars"></i>
+				</a>
 				<ul>
-					<li><a href="index.html"><i class="fa fa-fw fa-home homeIcon"></i>HOME</a></li>
+					<li>
+					<div class='home'>
+					<a href="index.html">
+					<!-- <i class="fa fa-fw fa-home homeIcon"></i> -->
+					HOME</a>
+					</div>
+					</li>
 					<li><a href="execteam.html">EXEC TEAM</a></li>
 					<li><a href="events.html">EVENTS</a></li>
-					<li><a href="workshops.html">WORKSHOPS</a></li>
+					<li class="lidropdown2"><a href="workshops.html" class="adropdownbutton2">WORKSHOPS</a>
+						<div class="dropdowncontent2">
+						<a href="frenchWorkshop.html">French</a>
+						<a href="mandarinWorkshop.html">Mandarin</a>
+						<a href="koreanWorkshop.html">Korean</a>
+						<a href="dutchWorkshop.html">Dutch</a>
+						<a href="japaneseWorkshop.html">Japanese</a>
+						</div>
+					</li>
+					
 					<li><a href="resources.html">RESOURCES</a></li>
 					<li><a href="contact.html">CONTACT</a></li>
 				</ul>
-				</div>
+				</div> <!-- end of navbar-mobile -->
+				
+				
 			</div>	<!-- end of mobile version -->
+			
+			
+			
+			
+			
+			
 			</div> <!-- end of right-header -->
 		</div> <!-- end of navBar -->
 </nav>
 </div> <!-- end of navbar -->
 </header>
-
 <main>
+<br><br><br><br><br><br>
 <h1>Workshops</h1>
 
 <div class="workshopRow">

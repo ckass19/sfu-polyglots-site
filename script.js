@@ -1,7 +1,16 @@
 
 
 
-
+window.onscroll = function() {myFunction()};
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function myFunction2() {
@@ -33,7 +42,8 @@ function toggleMobile(){
 function show_mobile_bar(){
 	let navbar = document.getElementById('navbar-mobile');
 	if (window.screen.width <= 600 ) {
-		navbar.style.width = '100%';
+		//changed from 100%;
+		navbar.style.width = '75%';
 	} 
 	else {
 		navbar.style.width = "200px";
